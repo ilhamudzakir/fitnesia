@@ -20,6 +20,7 @@
 </head>
 <?php $this->load->view('frontend/header') ?>
 <body>
+<div class="se-pre-con"></div>
 <?php echo $page ?>
 
 </body>
@@ -28,6 +29,7 @@
 
 	<!--js-->
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/modernizr.js"></script>
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/core.js"></script>
 	<!-- end js -->
