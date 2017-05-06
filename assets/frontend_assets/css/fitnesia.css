@@ -497,8 +497,36 @@ textarea:focus {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #6f6e73;
 }
+footer a{
+	color: #a3a2a7;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
+}
+footer a:hover{
+	color: #ec3628;
+	text-decoration: none;
+	
+}
 
+#privacy h5{
+	font-size: 20px;
+	font-weight: bold;
+	color: #58595b;
+}
+#privacy .sec-row{
+	margin-bottom: 30px;
+}
+.sec-row .content{
+	color: #828387;
+	font-size: 15px;
+}
+
+.sec-row a{
+	color: #ef3a2f;
+}
 /* Media Screen */
 
 @media only screen and (max-width: 768px) { 
