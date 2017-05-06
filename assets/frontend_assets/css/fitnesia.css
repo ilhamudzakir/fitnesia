@@ -416,13 +416,87 @@ footer li{
 	z-index: 9999;
 	background: url(../img/ring.gif) center no-repeat #fff;
 }
+.supp-header{
+padding: 15px;
+padding-bottom: 0px;
+}
+.supp-right{
+	padding: 20px;
+	border: 1px solid #babec1;
+	border-left: 1px solid #babec1;
+	border-right: 0px solid #babec1;
+}
+.supp-left{
+	padding: 20px;
+	border: 1px solid #babec1;
+	border-right: 0px solid #babec1;
+	border-left: 0px solid #babec1;
+}
+.supp-header img{
+	width: 200px;
+}
+.supp-header h5{
+    color: #6d6e72;
+    font-size: 30px;
+}
 
+.supp-header h3 {
+    color: #404042;
+    font-size: 45px;
+    font-weight: bold;
+}
+#form-supp{
+	background: #f2f4f3;
+	padding: 40px;
+}
 
+#form-supp input{
+	padding: 5px;
+	height: 50px;
+	font-size: 17px;
+	color: #6f6e73;
+}
 
+#form-supp textarea{
+	padding: 5px;
+	height: 150px;
+	font-size: 17px;
+	color: #6f6e73;
+}
 
+#form-supp button{
+	padding: 15px;
+	color: #fff;
+	font-size: 15px;
+	border:1px solid #ec3628;
+	background:#ec3628;
+	text-transform: uppercase;
+	border-radius:5px;
+}
 
+input:focus {
+    border:1px solid  #ec3628!important;
+    box-shadow: none!important;
+}
+textarea:focus {
+    border:1px solid  #ec3628!important;
+    box-shadow: none!important;
+}
 
-
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #6f6e73;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #6f6e73;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #6f6e73;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #6f6e73;
+}
 
 
 /* Media Screen */
