@@ -527,6 +527,22 @@ footer a:hover{
 .sec-row a{
 	color: #ef3a2f;
 }
+#career{
+	margin-top: 50px;
+	font-size: 15px;
+}
+#career h5{
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #404042;
+}
+.content-career{
+	color: #7e7f83;
+}
+.title2-career{
+	margin-top: 50px;
+}
+
 /* Media Screen */
 
 @media only screen and (max-width: 768px) { 
