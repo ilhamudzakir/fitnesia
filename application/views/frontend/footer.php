@@ -8,6 +8,7 @@
 				<li><a href="<?php echo base_url()?>career">Careers</a></li>
 				<li><a href="<?php echo base_url()?>privacy">Privacy</a></li>
 			</ul>
+			<div class="clearfix"></div>
 		</div>
 		<div class="col-md-4 text-right">
 			<a href="<?php echo base_url()?>contact"><button class="contact-footer">Contact</button></a>

@@ -14,6 +14,7 @@ body{
 	font-family: 'comforta-reguler';
 	letter-spacing: 1px;
 	font-size: 14px;
+	overflow-x:hidden; 
 }
 .fadeInBlock {
     opacity:0;
@@ -775,6 +776,9 @@ optgroup {
 .navbar-collapse {
 	z-index: 999999;
 }
+.picture-box-none{
+	display: none;
+}
 /* Media Screen */
 
 @media only screen and (max-width: 768px) { 
@@ -782,10 +786,31 @@ optgroup {
  	#logo-mobile{
 		display: block;
 	}
+	.logo-desktop{
+		display: none;
+	}
+	.navbar-nav > li {
+    	float: left;
+    	margin-right: 5px;
+	}
+	.navbar-brand {
+    	padding-left: 5px;
+    	padding-top: 25px;
+    	padding-right: 0px;
+	}
+
+
+} 
+@media only screen and (max-width: 1024px) { 
+
+	.navbar-nav > li {
+    	float: left;
+    	margin-right: 15px;
+	}
 
 } 
 
-@media only screen and (max-width: 320px) { 
+@media only screen and (max-width: 667px) { 
 
  	#logo-mobile{
 		display: block;
@@ -794,6 +819,98 @@ optgroup {
 		position: fixed;
 		top: 0px;
 	}
+	.logo-desktop{
+		display: none;
+	}
+	.navbar-nav > li {
+    float: left;
+    width: 100%;
+	}
+	.menu-top{
+		background: #fff
+	}
+	.navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu > li > a {
+    display: none;
+	}
+	.no-padding{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.get-start-col{
+		text-align: left;
+		padding-bottom: 5px;
+		background: #fff;
+		top: -7px;
+		position: relative;
+	}
+	.navbar-brand{
+		margin-left: 15px;
+	}
+	.banner-slide h3{
+		font-size: 30px;
+	}
+	#desc-slide {
+    	color: #fff;
+    	font-size: 20px;
+	}
+	.banner-slide {
+    min-height: 370px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+	}
+	.row-sec{
+		margin-bottom: 30px;
+	}
+	.box-color {
+    background: rgba(210, 62, 50, 0.8) none repeat scroll 0 0;
+    padding: 20px;
+	}
+	.title-white {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+	}
+	.banner h3 {
+    color: #fff;
+    font-size: 25px;
+	}
+	.picture-box {
+    padding: 10px;
+    text-align: center;
+	}
+	.picture-box-none{
+	display: block;
+	}
+	.picture-box-none2{
+	display: none;
+	}
+	.banner-partner h3 {
+    color: #fff;
+    font-size: 35px;
+	}
+	.cover-header h3 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+	}
+	.cover-header h5 {
+    color: #fff;
+    font-size: 20px;
+	}
+	.cover-header {
+    height: auto;
+    padding: 10px;
+    width: 100%;
+	}
+.isi-solution {
+    padding: 30px;
+    padding-right: 30px;
+}
+#form-supp {
+    background: #f2f4f3 none repeat scroll 0 0;
+    padding: 10px;
+}
 } 
 
 /* End MEdia Screen */

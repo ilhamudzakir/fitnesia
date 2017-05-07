@@ -21,20 +21,23 @@
 </div>
 </div>
 
-<div class="box-home-white">
+<div class="fadeInBlock box-home-white">
 <div class="container">
 		<div class="row">
 			<div class="col-md-8">
+			<div class="col-md-4 picture-box picture-box-none" style="">
+				<img src="<?php echo base_url() ?>assets/frontend_assets/img/infras.jpg">
+			</div>
 				<h2 class="title-box">Better Infrastructure</h2>
 				<span class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</span>
 			</div>
-			<div class="col-md-4 picture-box" style="">
+			<div class="col-md-4 picture-box picture-box-none2" style="">
 				<img src="<?php echo base_url() ?>assets/frontend_assets/img/infras.jpg">
 			</div>
 		</div>
 </div>
 </div>
-<div class="box-home-grey">
+<div class="fadeInBlock box-home-grey">
 <div class="container">
 		<div class="row">
 			<div class="col-md-4 picture-box" style="">
@@ -47,14 +50,17 @@
 		</div>
 </div>
 </div>
-<div class="box-home-white">
+<div class="fadeInBlock box-home-white">
 <div class="container">
 		<div class="row">
 			<div class="col-md-8">
+			<div class="col-md-4 picture-box picture-box-none" style="">
+				<img src="<?php echo base_url() ?>assets/frontend_assets/img/price.jpg">
+			</div>
 				<h2 class="title-box">Lower Price</h2>
 				<span class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</span>
 			</div>
-			<div class="col-md-4 picture-box" style="">
+			<div class="col-md-4 picture-box picture-box-none2" style="">
 				<img src="<?php echo base_url() ?>assets/frontend_assets/img/price.jpg">
 			</div>
 		</div>

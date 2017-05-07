@@ -41,18 +41,18 @@
         </div>
 
          <div class="row sec-solution fadeInBlock">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center row-sec">
             <img src="<?php echo base_url() ?>assets/frontend_assets/img/efective.jpg">
             <h5 class="header-text">effective</h5>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
         </div>
-        <div class="col-md-4 text-center fadeInBlock">
+        <div class="col-md-4 text-center fadeInBlock  row-sec">
             <img src="<?php echo base_url() ?>assets/frontend_assets/img/support.jpg">
             <h5 class="header-text">unparalled & unlimited support</h5>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
         </div>
 
-        <div class="col-md-4 text-center fadeInBlock">
+        <div class="col-md-4 text-center fadeInBlock  row-sec">
             <img src="<?php echo base_url() ?>assets/frontend_assets/img/dollar.jpg">
             <h5 class="header-text">no upfront fee</h5>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
@@ -69,7 +69,7 @@
                 <div class="col-md-6">
                     <h2 class="title-white">Making Business Software Accessible & Affordable</h2>
                     <h4>Many Companies do not obtain suffient value from their ERP. We are here to change that.</h4>
-                    <a href=""><button class="btn btn-learn">learn more</button></a>
+                    <a href="<?php echo base_url() ?>home/learn"><button class="btn btn-learn">learn more</button></a>
                 </div>
             </div>
         </div>
