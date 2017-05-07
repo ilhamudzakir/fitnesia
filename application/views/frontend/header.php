@@ -1,6 +1,6 @@
     <header>
     
-             <nav class="navbar nabvar-white">
+             <nav class="navbar nabvar-white nabvar-white-fixed">
              <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">

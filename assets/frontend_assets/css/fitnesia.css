@@ -528,12 +528,14 @@ padding-bottom: 0px;
 .supp-right{
 	padding: 20px;
 	border: 1px solid #babec1;
+	border-top: 0px;
 	border-left: 1px solid #babec1;
 	border-right: 0px solid #babec1;
 }
 .supp-left{
 	padding: 20px;
 	border: 1px solid #babec1;
+	border-top: 0px;
 	border-right: 0px solid #babec1;
 	border-left: 0px solid #babec1;
 }
@@ -770,6 +772,9 @@ optgroup {
     margin-bottom: 10px;
     padding-left: 5px;
 }
+.navbar-collapse {
+	z-index: 999999;
+}
 /* Media Screen */
 
 @media only screen and (max-width: 768px) { 
@@ -778,6 +783,17 @@ optgroup {
 		display: block;
 	}
 
+} 
+
+@media only screen and (max-width: 320px) { 
+
+ 	#logo-mobile{
+		display: block;
+	}
+	.nabvar-white{
+		position: fixed;
+		top: 0px;
+	}
 } 
 
 /* End MEdia Screen */
