@@ -9,7 +9,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-     <a  id="logo-mobile" class="navbar-brand" href="#" style=""><img src="<?php echo base_url() ?>assets/frontend_assets/img/logo.jpg"></a>
+     <a  id="logo-mobile" class="navbar-brand" href="<?php echo base_url() ?>" style=""><img src="<?php echo base_url() ?>assets/frontend_assets/img/logo.jpg"></a>
   </div>
   
   <div class="collapse navbar-collapse js-navbar-collapse">
