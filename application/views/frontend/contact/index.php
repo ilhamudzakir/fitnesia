@@ -1,16 +1,70 @@
-<section id="cover">
-     <div class="cover-header" style="background-image: url(<?php echo base_url() ?>assets/frontend_assets/img/slide3.jpg);">
-    <div class="container">
-        <h3>About SatuPlatform</h3>
-        <h5>Learn more about us and our team</h5>
-    </div>
-    </div>
-</section>
+<section id="contact">
+	<div class="container contact-content">
+		<div class="FadeInBlock col-md-6" id="form-contact">
+		<h3 class="title-black">Get in Touch</h3>
+  <form>
+  <div class="form-group">
+    <input type="text" placeholder="Full Name" class="form-control">
+  </div>
+   <div class="form-group">
+    <input type="text" placeholder="Company Name" class="form-control">
+  </div>
 
-<section id="content-statis">
-<div class="container">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure</p>
-</div>
+  <div class="form-group">
+    <input type="email" placeholder="Email" class="form-control">
+  </div>
+
+    <div class="form-group">
+    <input type="text" placeholder="Phone Number" class="form-control">
+  </div>
+   <div class="form-group">
+   <label>I'm interested in</label>
+    <select class="form-control">
+    <option value="">Please Select</option>
+    	 <optgroup label="Industry solutions">
+       <option>Education</option>
+       <option>HealthCare</option>
+       <option>Professional Service</option>
+       <option>Retail</option>
+       </optgroup>
+       
+       <optgroup label="Business Solutions">
+       <option>Business Processes</option>
+       <option>Customer Serivce</option>
+       <option>Procurement & Sourcing</option>
+       <option>Suply Chain Management</option>
+       </optgroup>
+
+       <optgroup label="Technology Solutions">
+       <option>Data & Analytics Management</option>
+       <option>Integration</option>
+       <option>Security</option>
+       </optgroup>
+    </select>
+  </div>
+  <div class="form-group">
+  <textarea class="form-control" placeholder="Message"></textarea>
+  </div>
+
+ <div class="form-group">
+  <button type="submit" class="btn btn-default">Contact Us</button>
+  </div>
+</form>
+
+		</div>
+    <div class="col-md-6 no-padding">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.70934647207!2d106.81831461436995!3d-6.169660162178381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d64d7d504d%3A0xf24eb2981d4826b7!2sKomplek+Majapahit+Permai+Blok-C!5e0!3m2!1sen!2sid!4v1494163676111" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+		<div class="col-md-6 no-padding">
+			<div class="contact-info">
+				<h5>Contact</h5>
+				<p>Komplek Majapahit Permai</p>
+				<p>Blok C No.109</p>
+				<br>
+				<p>+6221 351 7984</p>
+				<p>info@satuplatfor.com</p>
+				<p>www.satuplatform.com</p>
+			</div>
+		</div>
+	</div>
 </section>

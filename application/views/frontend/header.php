@@ -1,5 +1,7 @@
     <header>
-    	 <nav class="navbar nabvar-white">
+    
+             <nav class="navbar nabvar-white">
+             <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -11,7 +13,8 @@
   </div>
   
   <div class="collapse navbar-collapse js-navbar-collapse">
-   <div class="col-md-2">
+  <div class="row">
+   <div class="col-md-2 text-left">
      <a class="navbar-brand" href="<?php echo base_url() ?>" style=""><img src="<?php echo base_url() ?>assets/frontend_assets/img/logo.jpg"></a>
     </div>
     <div class="col-md-6 col-md-offset-2 menu-top">
@@ -57,9 +60,11 @@
       <li><a href="<?php echo base_url() ?>support">Support</a></li>
     </ul>
     </div>
-    <div class="col-md-2 text-right">
+    <div class="col-md-2 text-right no-padding">
           <button class="get-start">Get Started</button>
+      </div>
       </div>
   </div><!-- /.nav-collapse -->
   </nav>
+    </div>
     </header>
