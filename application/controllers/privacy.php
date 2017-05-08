@@ -6,10 +6,12 @@ class Privacy extends PX_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'privacy','controller_name' => 'Privacy');
+                $this->do_underconstruct();
 	}
 
 	public function index() {
-		$data = $this->controller_attr;
+		$data = $this->get_app_settings();
+                $data += $this->controller_attr;
 		
 
 		$data['page'] = $this->load->view('frontend/privacy/index',$data,true);

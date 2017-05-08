@@ -21,6 +21,7 @@ class PX_Controller extends CI_Controller {
         $this->tbl_user = $this->tbl_prefix . 'user';
         $this->tbl_useraccess = $this->tbl_prefix . 'useraccess';
         $this->tbl_usergroup = $this->tbl_prefix . 'usergroup';
+        $this->tbl_underconstruct_status = $this->tbl_prefix. 'underconstruct_status';
         // MODELS
         $this->load->model('model_basic');
         $this->load->model('model_menu');
@@ -248,6 +249,17 @@ class PX_Controller extends CI_Controller {
     function indonesian_currency($number) {
         $result = 'Rp. ' . number_format($number, 0, '', '.');
         return $result;
+    }
+    
+    function do_underconstruct() {
+        $data = $this->model_basic->select_where($this->tbl_underconstruct_status, 'id', 1)->row();
+        if($data->underconstruct_status == 1)
+        {
+            if ($this->session->userdata('admin') == FALSE) {
+                redirect('underconstruction');
+            } else
+                return TRUE;
+        }
     }
 
 }

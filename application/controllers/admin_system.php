@@ -634,6 +634,7 @@ class Admin_system extends PX_Controller {
 		$data += $this->get_function('Admin Settings','settings');
 		$data += $this->get_menu();
 		$this->check_userakses($data['function_id'], ACT_READ);
+                $data['underconstruct_status'] = $this->model_basic->select_where($this->tbl_underconstruct_status, 'id', 1)->row()->underconstruct_status;
 		$data['data'] = $this->model_usergroup->get_all();
 		$data['content'] = $this->load->view('backend/admin_system/settings',$data,true);
 		$this->load->view('backend/index',$data); 
@@ -818,6 +819,23 @@ class Admin_system extends PX_Controller {
 			$this->returnJson(array('status' => 'ok', 'data' => $data));
 		else
 			$this->returnJson(array('status' => 'error', 'msg' => 'Data not found'));
+    }
+    
+    function change_status_underconstruction()
+    {
+        $value = $this->input->post('value');
+        if($value == 0)
+            $new_value = 1;
+        else
+            $new_value = 0;
+        $data_update = array('underconstruct_status' => $new_value);
+        if(!$this->model_basic->update($this->tbl_underconstruct_status, $data_update, 'id', 1))
+                $this->returnJson (array('status' => 'error'));
+        else
+        {
+            $data = $this->model_basic->select_where($this->tbl_underconstruct_status, 'id', 1)->row();
+            $this->returnJson(array('status' => 'ok', 'underconstruct_status' => $data->underconstruct_status));
+        }
     }
 	
 }

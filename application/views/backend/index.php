@@ -42,7 +42,7 @@
 				<!-- START X-NAVIGATION -->
 				<ul class="x-navigation">
 					<li class="xn-logo">
-						<a href="" class="xn-logo-big" style="background:rgba(0, 0, 0, 0) url('assets/uploads/app_settings/<?php echo $app_mini_logo; ?>') no-repeat scroll center center / auto 100%;"></a>
+						<a href="" class="xn-logo-big" style="background:rgba(0, 0, 0, 0) url('assets/uploads/app_settings/<?php echo $app_mini_logo; ?>') no-repeat scroll center center / auto 50%;"></a>
 						<a href="" class="xn-logo-mini" style="background:rgba(0, 0, 0, 0) url('assets/uploads/app_settings/<?php echo $app_single_logo; ?>') no-repeat scroll center center / auto 30px;"></a>
 						<a href="#" class="x-navigation-control"></a>
 					</li>

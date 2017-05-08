@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2017 at 09:41 AM
+-- Generation Time: May 08, 2017 at 05:41 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fitnesia`
+-- Database: `satuplatform`
 --
 
 -- --------------------------------------------------------
@@ -55,7 +55,7 @@ CREATE TABLE `px_adm_config` (
 --
 
 INSERT INTO `px_adm_config` (`id`, `login_logo`, `mini_logo`, `single_logo`, `favicon_logo`, `title`, `desc`) VALUES
-(1, '589acfe7dac68-original.png', '589acfeaeed0c-original.png', '589acfde6f070-original.png', '589acfe2ca996-original.png', 'Fitnesia Indo Teknologi', 'Fitnesia Indo Teknologi Administrator Page');
+(1, '590fe39665c42-original.jpg', '590fe39ab7be3-original.jpg', '590fe4323df1f-original.jpg', '590fe4362070b-original.jpg', 'SATUPLATFORM', 'SATUPLATFORM Administrator Page');
 
 -- --------------------------------------------------------
 
@@ -762,6 +762,24 @@ CREATE TABLE `px_static_content` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `px_underconstruct_status`
+--
+
+CREATE TABLE `px_underconstruct_status` (
+  `id` int(11) NOT NULL,
+  `underconstruct_status` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `px_underconstruct_status`
+--
+
+INSERT INTO `px_underconstruct_status` (`id`, `underconstruct_status`) VALUES
+(1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `px_user`
 --
 
@@ -899,6 +917,12 @@ ALTER TABLE `px_static_content`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `px_underconstruct_status`
+--
+ALTER TABLE `px_underconstruct_status`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `px_user`
 --
 ALTER TABLE `px_user`
@@ -965,6 +989,11 @@ ALTER TABLE `px_news`
 --
 ALTER TABLE `px_static_content`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `px_underconstruct_status`
+--
+ALTER TABLE `px_underconstruct_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `px_user`
 --

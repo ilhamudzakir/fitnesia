@@ -6,10 +6,12 @@ class Home extends PX_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'home','controller_name' => 'Home');
+                $this->do_underconstruct();
 	}
 
 	public function index() {
-		$data = $this->controller_attr;
+		$data = $this->get_app_settings();
+                $data += $this->controller_attr;
 		
 
 		$data['page'] = $this->load->view('frontend/home/index',$data,true);
@@ -17,7 +19,8 @@ class Home extends PX_Controller {
 	}
 
 	public function learn() {
-		$data = $this->controller_attr;
+		$data = $this->get_app_settings();
+                $data += $this->controller_attr;
 		
 
 		$data['page'] = $this->load->view('frontend/home/learn',$data,true);

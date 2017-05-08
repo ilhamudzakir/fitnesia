@@ -6,10 +6,12 @@ class Solution extends PX_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'solution','controller_name' => 'Solution');
+                $this->do_underconstruct();
 	}
 
 	public function index() {
-		$data = $this->controller_attr;
+		$data = $this->get_app_settings();
+                $data += $this->controller_attr;
 		
 
 		$data['page'] = $this->load->view('frontend/solution/index',$data,true);
@@ -17,7 +19,8 @@ class Solution extends PX_Controller {
 	}
 
 	public function detail() {
-		$data = $this->controller_attr;
+		$data = $this->get_app_settings();
+                $data += $this->controller_attr;
 		
 
 		$data['page'] = $this->load->view('frontend/solution/detail',$data,true);

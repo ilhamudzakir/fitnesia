@@ -69,5 +69,37 @@ $(document).ready(function(){
 		var old_temp = $('[name="'+target+'"]').val();
 		$('#file-upload #target-file').val(target);
 		$('#file-upload #old-file').val(old_temp);
-	})
+	});
+        $('#underconstruct_button').click(function(){
+            var value = $(this).attr('data-value');
+            $.ajax({
+                url : 'admin_system/change_status_underconstruction',
+                type : 'POST',
+                dataType : 'json',
+                data : {value:value},
+                success : function(response){
+                    if(response.status == 'ok')
+                    {
+                        if(response.underconstruct_status == 0)
+                        {
+                            $('#underconstruct_button').removeClass('btn-danger');
+                            $('#underconstruct_button').addClass('btn-success');
+                            $('#underconstruct_button').html('');
+                            $('#underconstruct_button').html('Website Online');
+                            $('#underconstruct_button').attr('data-value', response.underconstruct_status);
+                        }
+                        else
+                        {
+                            $('#underconstruct_button').removeClass('btn-success');
+                            $('#underconstruct_button').addClass('btn-danger');
+                            $('#underconstruct_button').html('');
+                            $('#underconstruct_button').html('Website Underconstruction');
+                            $('#underconstruct_button').attr('data-value', response.underconstruct_status);
+                        }
+                    }
+                    else
+                        alert('Perubahan Gagal, silahkan coba lagi');
+                }
+            });
+        });
 })

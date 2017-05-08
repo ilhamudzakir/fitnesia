@@ -3,13 +3,13 @@
 
 <head>
 
-    <title><?php echo $controller_name ?> - Fitnesia</title>
+    <title><?php echo $app_title; ?> - <?php echo $controller_name; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name='robots' content='noindex, nofollow' />
     <meta content="" name="title" />
     <meta content="" name="author" />
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="">
+    <link rel="shortcut icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!--style-->

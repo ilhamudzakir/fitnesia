@@ -22,7 +22,7 @@
 		<div class="login-container">
 		
 			<div class="login-box animated fadeInDown">
-				<div class="login-logo" style="height:100px;background:rgba(0, 0, 0, 0) url('assets/uploads/app_settings/<?php echo $app_login_logo; ?>') no-repeat scroll center center / auto 100%;"></div>
+				<div class="login-logo" style="height:100px;background:rgba(0, 0, 0, 0) url('assets/uploads/app_settings/<?php echo $app_login_logo; ?>') no-repeat scroll center center / auto 50%;"></div>
 				<div class="login-body">
 					<div class="login-title"><strong>Welcome</strong>, Please login</div>
 					<form action="admin/do_login" class="form-horizontal" method="post" id="login-form">
@@ -57,7 +57,7 @@
 				</div>
 				<div class="login-footer">
 					<div class="pull-left">
-						&copy; 2015 <?php echo $app_title; ?>
+						&copy; 2017 <?php echo $app_title; ?>
 					</div>
 					<!-- <div class="pull-right">
 						<a href="#">About</a> |

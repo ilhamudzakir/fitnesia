@@ -22,6 +22,9 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">                                
 					<h3 class="panel-title">Data</h3>
+                                        <a class="btn <?php if($underconstruct_status == 0) echo 'btn-success'; else echo 'btn-danger'; ?> pull-right btn-add" id="underconstruct_button" data-value="<?php echo $underconstruct_status ?>">
+                                            <?php if($underconstruct_status == 0) echo 'Website Online'; else echo 'Website Underconstruction'; ?>
+                                        </a>
 					<!-- <ul class="panel-controls">
 						<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
 						<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
