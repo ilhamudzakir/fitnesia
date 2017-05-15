@@ -2,7 +2,6 @@
      <div class="cover-header" style="background-image: url(<?php echo base_url() ?>assets/frontend_assets/img/slide3.jpg);">
     <div class="container">
         <h3>About SatuPlatform</h3>
-        <h5>Learn more about us and our team</h5>
     </div>
     </div>
 </section>

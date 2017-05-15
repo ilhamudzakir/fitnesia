@@ -19,6 +19,23 @@ $(function() {
         }); 
     
     });
+
+$(".box-blog").slice(0, 8).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $("div:hidden").slice(0, 8).slideDown();
+        if ($("div:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+        $('html,body').animate({
+            scrollTop: $(this).offset().top
+        }, 1500);
+    });
+    
+    $('#toogle-menu').hover(function(){
+        $('.dropdown-toggle').click();
+});
+
 });
 
 $(window).load(function() {

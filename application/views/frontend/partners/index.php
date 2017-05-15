@@ -36,21 +36,21 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="text-center">
-					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/accelerate.jpg">
+					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/accelerate.png">
 					<h5>We help you accelarate</h5>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
-					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/customer.jpg">
+					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/customer.png">
 					<h5>We help you accelarate</h5>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
-					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/upfont.jpg">
+					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/upfont.png">
 					<h5>We help you accelarate</h5>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>

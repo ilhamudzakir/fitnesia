@@ -20,7 +20,9 @@
 </head>
 <?php $this->load->view('frontend/header') ?>
 <body>
+<?php if($this->uri->segment(1)!='blog'){ ?>
 <div class="se-pre-con"></div>
+<?php } ?>
 <?php echo $page ?>
 
 </body>

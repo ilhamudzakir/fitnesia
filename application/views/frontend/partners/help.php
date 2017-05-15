@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
-					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/1.jpg">
+					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/1.png">
 				</div>
 				<div class="col-md-6 text-left">
 					<div><span class="number">1</span></div>
@@ -27,7 +27,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
-					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/2.jpg">
+					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/2.png">
 				</div>
 				<div class="col-md-6 text-left">
 					<div><span class="number">2</span></div>
@@ -42,7 +42,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
-					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/3.jpg">
+					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/3.png">
 				</div>
 				<div class="col-md-6 text-left">
 					<div><span class="number">3</span></div>
@@ -57,7 +57,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
-					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/4.jpg">
+					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/4.png">
 				</div>
 				<div class="col-md-6 text-left">
 					<div><span class="number">4</span></div>
@@ -72,7 +72,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
-					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/5.jpg">
+					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/5.png">
 				</div>
 				<div class="col-md-6 text-left">
 					<div><span class="number">5</span></div>

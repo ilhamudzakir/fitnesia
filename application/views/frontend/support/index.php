@@ -2,13 +2,13 @@
      <div class="">
      <div class="row">
      	<div class="col-md-6 text-center supp-left">
-     		<img src="<?php echo base_url() ?>assets/frontend_assets/img/technic-supp.jpg">
+     		<img src="<?php echo base_url() ?>assets/frontend_assets/img/technic-supp.png">
      		<h5>Technical Support</h5>
      		<h3>(021) 6234 xxxx</h3>
      	</div>
 
      	<div class="col-md-6 text-center supp-right">
-     		<img src="<?php echo base_url() ?>assets/frontend_assets/img/sales.jpg">
+     		<img src="<?php echo base_url() ?>assets/frontend_assets/img/sales.png">
      		<h5>Sales</h5>
      		<h3>(021) 6234 xxxx</h3>
      	</div>
