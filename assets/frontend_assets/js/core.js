@@ -32,8 +32,11 @@ $(".box-blog").slice(0, 8).show();
         }, 1500);
     });
     
-    $('#toogle-menu').hover(function(){
-        $('.dropdown-toggle').click();
+
+
+$(".dropdown-toggle").hover(function(){
+  $('#toogle-menu').addClass( "open" );
+  $(".dropdown-toggle").attr("aria-expanded","true");
 });
 
 });
