@@ -2,7 +2,7 @@
 
 <section id="content-solution">
 <div class="row">
-<div class="col-md-4">
+<div class="col-md-4 img-responsive img-detail">
 	<img src="<?php echo base_url() ?>assets/frontend_assets/img/solution.jpg" width="100%">
 </div>
 <div class="col-md-8 isi-solution">

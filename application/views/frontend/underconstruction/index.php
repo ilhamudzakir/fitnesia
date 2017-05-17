@@ -34,7 +34,7 @@ Description: alive is a minimal, responsive, business coming soon / landing page
             <div class="banner-container">
                 <div class="container">
                     <div class="row">
-                        <div class="logo"> <img src="assets/frontend_assets/img/logo.jpg" alr='logo'/> </div>
+                        <div class="logo"> <img src="assets/frontend_assets/img/logo.png" alr='logo'/> </div>
                     </div>
                     <div class="heading text-center">
                         <h2>OUR NEW SITE IS COMING SOON</h2>

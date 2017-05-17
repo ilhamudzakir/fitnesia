@@ -1,7 +1,7 @@
 <section id="slider">
     <div class="banner-partner" style="background-image: url(<?php echo base_url() ?>assets/frontend_assets/img/slide1.jpg);">
     <div class="containter content-partner">
-    	<h3>SatuPlatform help saas companies worldwide enter southeast Asian market</h3>
+    	<h3>Satuplatform help saas companies worldwide enter southeast Asian market</h3>
         <div id="desc-slide"><span>Grow and scale your business at 0 sec</span></div>
         <a href="<?php echo base_url() ?>partners/help"><button class="btn btn-partner">See how it works</button></a>
     </div>
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-12">
                 <div class="text-center">
-                    <h2 class="title-white">What is SatuPlatform?</h2>
+                    <h2 class="title-white">What is Satuplatform?</h2>
                     <h4>One-stop Solutions for SAAS Companies</h4>
                 </div>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -43,15 +43,15 @@
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
-					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/customer.png">
-					<h5>We help you accelarate</h5>
+					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/partners.png">
+					<h5>We help certain customers</h5>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
 					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/upfont.png">
-					<h5>We help you accelarate</h5>
+					<h5>With no upfront cost</h5>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 				</div>
@@ -64,18 +64,35 @@
 	<div class="container">
 	<div class="title-become-partner text-center">
 		<h2 class="title-white">Become a Partner, </h2>
-		<h2 class="title-white">Get Started on SatuPlatform now!</h2>
+		<h2 class="title-white">Get Started on SATUPLATFORM now!</h2>
 		<br>
 		<h5 class="subtitle-white">Please fill out the form below and our Partner Management Team will contact you</h5>
 	</div>
 <div id="form-become">
   <form>
    <div class="form-group">
-    <input placeholder="Comapny Name" class="form-control" type="text">
+    <input placeholder="Company Name" class="form-control" type="text">
   </div>
   <div class="form-group">
     <select class="form-control">
-    <option value="">SaaS Type</option>
+        <option value="" hidden>SAAS Type</option>
+        <optgroup label="INDUSTRY SOLUTIONS">
+            <option value="Education">Education</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Professional Services">Professional Services</option>
+            <option value="Retail">Retail</option>
+        </optgroup>
+        <optgroup label="BUSINESS SOLUTIONS">
+            <option value="Business Process">Business Process</option>
+            <option value="Customer Services">Customer Services</option>
+            <option value="Procurement & Sourcing">Procurement & Sourcing</option>
+            <option value="Supply Chain Management">Supply Chain Management</option>
+        </optgroup>
+        <optgroup label="TECHNOLOGY SOLUTIONS">
+            <option value="Data & Analytics Management">Data & Analytics Management</option>
+            <option value="Integration">Integration</option>
+            <option value="Security">Security</option>
+        </optgroup>
     </select>
   </div>
   <div class="form-group">

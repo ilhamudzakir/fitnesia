@@ -10,33 +10,33 @@
 <section id="career">
 	<div class="container">
 	<div class="row">
-		<div class="col-md-4">
-			<h5>Featured Jobs</h5>
-			<div class="content-career">
-				<span>Data Analyst</span><br>
-				<span>Information Security Analyst</span><br>
-				<span>Sales Marketing</span><br>
-				<span>Customer Sevice</span><br>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<h5>Department</h5>
-			<div class="content-career">
-				<span>Engineering</span><br>
-				<span>Engineering</span><br>
-				<span>Sales</span><br>
-				<span>Customer Sevice</span><br>
-				</div>
-		</div>
-		<div class="col-md-4">
-			<h5>Location</h5>
-			<div class="content-career">
-				<span>Jakarta</span><br>
-				<span>Jakarta</span><br>
-				<span>Jakarta</span><br>
-				<span>Jakarta</span><br>
-			</div>
-		</div>
+            <table class="table" border="0">
+                <thead>
+                    <th width="40%">Featured Jobs</th>
+                    <th width="40%">Department</th>
+                    <th width="20%">Location</th>
+                </thead>
+                <tr>
+                    <td>Data Analyst</td>
+                    <td>Engineering</td>
+                    <td>Jakarta</td>
+                </tr>
+                <tr>
+                    <td>Information Security Analyst</td>
+                    <td>Engineering</td>
+                    <td>Jakarta</td>
+                </tr>
+                <tr>
+                    <td>Sales Marketing</td>
+                    <td>Sales</td>
+                    <td>Jakarta</td>
+                </tr>
+                <tr>
+                    <td>Customer Service</td>
+                    <td>Customer Service</td>
+                    <td>Jakarta</td>
+                </tr>
+            </table>
 		<div class="col-md-12 text-center title2-career">
 			<h5>Send us your application</h5>
 		</div>
