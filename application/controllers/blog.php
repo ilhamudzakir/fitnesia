@@ -17,5 +17,13 @@ class Blog extends PX_Controller {
 		$data['page'] = $this->load->view('frontend/blog/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
+	public function detail() {
+		$data = $this->get_app_settings();
+                $data += $this->controller_attr;
+		
+
+		$data['page'] = $this->load->view('frontend/blog/detail',$data,true);
+		$this->load->view('frontend/layout',$data);
+	}
 
 }
