@@ -39,6 +39,11 @@ $(".dropdown-toggle").hover(function(){
   $(".dropdown-toggle").attr("aria-expanded","true");
 });
 
+$(".dropdown-menu").mouseleave(function(){
+    $('#toogle-menu').removeClass( "open" );
+    $(".dropdown-toggle").attr("aria-expanded","false");
+})
+
 });
 
 $(window).load(function() {

@@ -20,7 +20,8 @@
     <div class="col-md-6 col-lg-6 col-sm-7 col-md-offset-2 menu-top">
     <ul class="nav navbar-nav">
             <li id="toogle-menu" class="dropdown mega-dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solution <span class="caret"></span></a>        
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solution <span class="caret"></span>
+          </a>
         <ul class="dropdown-menu mega-dropdown-menu">
           <li class="col-sm-12 col-xs-12 col-md-4">
               <ul>

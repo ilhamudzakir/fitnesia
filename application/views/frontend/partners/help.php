@@ -17,7 +17,7 @@
 				<div class="col-md-6 text-left">
 					<div><span class="number">1</span></div>
 					<div class="content-sec-help">
-					<p><b>Tell us your needs.</b> with our 24/7 support we are ready to help you, anytime, anywhere, for any business problem</p>	
+					<p><b>Tell us your requirements.</b> With our 24/7 support, we are ready to help you, anytime, anywhere, for any business problems.</p>	
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="col-md-6 text-left">
 					<div><span class="number">2</span></div>
 					<div class="content-sec-help">
-					<p><b>We will find the software.</b> Our team will offer you the most suitable Software as Service solution.</p>	
+					<p><b>We will find the right solutions.</b> Our team will off¬er you the most suitable technology solution.</p>	
 					</div>
 				</div>
 			</div>
@@ -47,7 +47,7 @@
 				<div class="col-md-6 text-left">
 					<div><span class="number">3</span></div>
 					<div class="content-sec-help">
-					<p><b>Rapid and easy deployment.</b> We will guide you every step of the way through the implementaion.</p>	
+					<p><b>Rapid and easy deployment.</b> We will guide you every step of the way through the implementation.</p>	
 					</div>
 				</div>
 			</div>
@@ -62,7 +62,7 @@
 				<div class="col-md-6 text-left">
 					<div><span class="number">4</span></div>
 					<div class="content-sec-help">
-					<p><b>We will monitor the implementation.</b> We will provide constant monitoringand training to ensure that obectives of the software adoption are mett.</p>	
+					<p><b>We will monitor the implementation.</b> We will provide constant monitoring and training to ensure that objectives of the software adoption are met.</p>	
 					</div>
 				</div>
 			</div>
@@ -77,7 +77,7 @@
 				<div class="col-md-6 text-left">
 					<div><span class="number">5</span></div>
 					<div class="content-sec-help">
-					<p><b>Grow your business with us.</b> We are focused on helping companies achieve their business goals beacause we believe that ultimate proof of a great software is client succsess.</p>	
+					<p><b>Grow your business with us. </b> We are focused on helping companies achieve their company goals because we believe that the ultimate proof of a great software is client success.</p>	
 					</div>
 				</div>
 			</div>

@@ -18,8 +18,8 @@
                     <h2 class="title-white">What is Satuplatform?</h2>
                     <h4>One-stop Solutions for SAAS Companies</h4>
                 </div>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                   <p>Satuplatform is a platform that helps SaaS companies around the world tap into the growing number of businesses and industries in Southeast Asia.</p>
+                   <p>For Southeast Asia, it is not Software As a Service. It is a Software AND A Service. It is not as simple as building a reliable cloud-based solution that can scale virtually. You need a partner who can work with your users to scale them up as well. We understand that a lot of education is needed not just to sell product but to retain and even up-sell. We are here to take care two of the most crucial parts of any SaaS business: customer acquisition and customer retention.</p>
                 </div>
             </div>
         </div>
@@ -30,30 +30,30 @@
 <section id="unique" class="fadeInBlock">
 	<div class="container">
 		<div class="text-center title-unique">
-			<h2 class="title-black">Our unique approach is designed to unlock value and mitigate risk</h2>
+			<h2 class="title-black">Our unique approach is designed to unlock value and mitigate risk.</h2>
 		</div>
 		<div class="content-unique">
 			<div class="row">
 				<div class="col-md-4">
 					<div class="text-center">
 					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/accelerate.png">
-					<h5>We help you accelarate</h5>
+					<h5>We help you accelerate</h5>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+					<p>Scaling your product to other unfamiliar regions can put your business at risk. Our platform allows you to maximize the reach and scale of your business without growing your payroll.</p>
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
 					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/partners.png">
-					<h5>We help certain customers</h5>
+					<h5>We help retain customers</h5>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+					<p>Being a SaaS provider in Southeast Asia requires its own locally contextualized innovation of being Software AND a Service. We will take care of the SERVICE so you can just focus on the SOFTWARE.</p>
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
 					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/upfont.png">
 					<h5>With no upfront cost</h5>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+					<p>No sign-up fee required. We pride ourselves as the “ZERO-risk” platform where you can enjoy all the benefits of scaling your product without bearing any financial risk. With commission per sale, we only make money when you do.</p>
 				</div>
 			</div>
 		</div>
