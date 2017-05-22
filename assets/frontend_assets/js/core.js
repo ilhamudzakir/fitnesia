@@ -24,7 +24,7 @@ $(".box-blog").slice(0, 8).show();
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $(".box-blog:hidden").slice(0, 8).slideDown();
-        if ($(".box-blog:hidden").length == 0) {
+        if ($(".box-blog:hidden").length =='0') {
             $("#load").fadeOut('slow');
         }
         $('html,body').animate({

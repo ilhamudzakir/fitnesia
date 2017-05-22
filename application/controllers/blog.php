@@ -13,7 +13,7 @@ class Blog extends PX_Controller {
 		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
                 
-                $data['blog'] = $this->model_basic->select_all_limit_order_start($this->tbl_news, 50, 0, 'id', 'DESC')->result();
+                $data['blog'] = $this->model_basic->select_all_order($this->tbl_news,'id', 'DESC');
                 
 		$data['page'] = $this->load->view('frontend/blog/index',$data,true);
 		$this->load->view('frontend/layout',$data);
