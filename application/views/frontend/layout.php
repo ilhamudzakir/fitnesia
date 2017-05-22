@@ -8,6 +8,7 @@
     <meta name='robots' content='noindex, nofollow' />
     <meta content="" name="title" />
     <meta content="" name="author" />
+    <base href="<?php echo base_url() ?>" />
     <link rel="shortcut icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">

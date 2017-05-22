@@ -1,214 +1,22 @@
 <section id="cover">
     <div class="container">
-        <h3 class="title-black">SatuPlatform Blog</h3>
+        <h3 class="title-black">Satuplatform Blog</h3>
     </div>
 </section>
 
 <section id="content-blog">
-<iv class="">
+<div class="">
     <div class="row">
-
+        <?php foreach($blog as $data_row) { ?>
     	<div class="box-blog col-md-3">
-    		<img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
+    		<a href="blog/detail/<?php echo $data_row->id ?>"><img src="<?php echo 'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo ?>"></a>
     		<div class="isi-blog">
-    		<span class="date-blog">2 days ago</span>
-    		<p class="title-blog">Judul Artikel Keren Cool Saas</p>
-    		<a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
+    		<span class="date-blog"><?php echo time_elapsed_string($data_row->date_created); ?></span>
+                <a href="blog/detail/<?php echo $data_row->id ?>"><p class="title-blog"><?php echo $data_row->title ?></p></a>
+    		<a class="read-more" href="blog/detail/<?php echo $data_row->id ?>"><span >Read More ></span></a>
     		</div>
     	</div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-        <div class="box-blog col-md-3">
-            <img src="<?php echo base_url() ?>assets/frontend_assets/img/news.jpg">
-            <div class="isi-blog">
-            <span class="date-blog">2 days ago</span>
-            <p class="title-blog">Judul Artikel Keren Cool Saas</p>
-            <a class="read-more" href="<?php echo base_url() ?>blog/detail/"><span >Read More ></span></a>
-            </div>
-        </div>
-    	
+        <?php } ?>
     </div>
     <div class="row">
         <div class="col-md-12">

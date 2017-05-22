@@ -138,5 +138,13 @@ class Model_basic extends PX_Model {
 		$data = $this->db->get();
 		return $data->result();
 	}
+        
+        function select_all_limit_order_start($table, $limit, $start, $order_by, $order){
+		$this->load->database('default',TRUE);
+		$this->db->select('*');
+                $this->db->order_by($order_by, $order);
+		$data = $this->db->get($table, $limit, $start);
+		return $data;
+	}
 
 }

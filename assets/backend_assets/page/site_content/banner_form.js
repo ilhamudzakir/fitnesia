@@ -60,7 +60,7 @@ $(document).ready(function(){
 			$('#original-image').Jcrop({
 				onChange: showPreview,
 				onSelect: showPreview,
-				aspectRatio: 2.94 / 1,
+				aspectRatio: 2.794 / 1,
 				setSelect:  [ 0, 12, 569, 227.6 ]
 			});
 		}).on('fileuploadfail', function (e, data) {
@@ -84,7 +84,7 @@ $(document).ready(function(){
 		var imgheight = $('#original-image').height();
 		$('#fakeheight').val(imgheight);
 		$('#fakewidth').val(imgwidth);
-		var ratios = 2.94 / 1;
+		var ratios = 2.794 / 1;
 		$('#original-image').Jcrop({
 			onChange: showPreview,
 			onSelect: showPreview,
@@ -108,7 +108,7 @@ $(document).ready(function(){
 		var imgheight = $('#original-image').height();
 		$('#fakeheight').val(imgheight);
 		$('#fakewidth').val(imgwidth);
-		var rx = 294 / coords.w;
+		var rx = 279.4 / coords.w;
 		var ry = 100 / coords.h;
 
 		$('#crop-image').attr('src',image_asli).css({

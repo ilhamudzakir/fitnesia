@@ -22,6 +22,7 @@ class PX_Controller extends CI_Controller {
         $this->tbl_useraccess = $this->tbl_prefix . 'useraccess';
         $this->tbl_usergroup = $this->tbl_prefix . 'usergroup';
         $this->tbl_underconstruct_status = $this->tbl_prefix. 'underconstruct_status';
+        $this->tbl_solutions = $this->tbl_prefix. 'solutions';
         // MODELS
         $this->load->model('model_basic');
         $this->load->model('model_menu');
@@ -61,6 +62,22 @@ class PX_Controller extends CI_Controller {
         $data['footer_about_us'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 2)->row();
         $data['footer_contact_us'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 1)->row();
 
+        return $data;
+    }
+    function get_app_settings_frontend() {
+        $d_row = $this->model_basic->select_all_limit($this->tbl_adm_config, 1)->row();
+        $data['app_id'] = $d_row->id;
+        $data['app_title'] = $d_row->title;
+        $data['app_desc'] = $d_row->desc;
+        $data['app_login_logo'] = $d_row->login_logo;
+        $data['app_mini_logo'] = $d_row->mini_logo;
+        $data['app_single_logo'] = $d_row->single_logo;
+        $data['app_mini_logo'] = $d_row->mini_logo;
+        $data['app_favicon_logo'] = $d_row->favicon_logo;
+        
+        $data['solution_menu_technology'] = $this->model_basic->select_where($this->tbl_solutions, 'category_id', 1)->result();
+        $data['solution_menu_business'] = $this->model_basic->select_where($this->tbl_solutions, 'category_id', 2)->result();
+        $data['solution_menu_industry'] = $this->model_basic->select_where($this->tbl_solutions, 'category_id', 3)->result();
         return $data;
     }
 

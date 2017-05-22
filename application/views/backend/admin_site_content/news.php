@@ -34,6 +34,7 @@
 						<thead>
 							<tr>
 								<th width="6%" class="text-center">No</th>
+                                                                <th class="text-center">Category</th>
 								<th class="text-center">Title</th>
 								<th width="15%" class="text-center">Action</th>
 							</tr>
@@ -42,11 +43,11 @@
 							<?php $no=1; foreach ($data as $d_row) { ?>
 							<tr>
 								<td class="text-center"><?php echo $no; ?></td>
+                                                                <td class="text-center"><?php echo $d_row->category; ?></td>
 								<td class="text-center"><?php echo $d_row->title; ?></td>
 								<td class="text-center">
 									<form action="<?php echo $controller.'/'.$function_form; ?>" method="post">
 										<input type="hidden" name="id" value="<?php echo $d_row->id; ?>">
-                                                                                <a href="<?php echo $controller.'/news_images/'.$d_row->id; ?>" class="btn btn-xs btn-primary" data-original-title="Images" data-placement="top" data-toggle="tooltip"><i class="fa fa-image"></i></a>
 										<button class="btn btn-info btn-xs btn-edit" type="submit" data-original-title="Update" data-placement="top" data-toggle="tooltip"><i class="fa fa-edit"></i></button>
 										<button class="btn btn-danger btn-xs btn-delete" type="button" data-original-title="Delete" data-placement="top" data-toggle="tooltip" data-target-id="<?php echo $d_row->id; ?>"><i class="fa fa-trash-o"></i></button>
 								 	</form>
@@ -66,10 +67,10 @@
 <!-- PAGE CONTENT WRAPPER -->
 
 <!-- MESSAGE BOX -->
-<div id="px-site-content-news-message-box" class="message-box message-box-warning animated fadeIn fade">
+<div id="px-site_content-news-message-box" class="message-box message-box-warning animated fadeIn fade">
 	<div class="mb-container">
 		<div class="mb-middle">
-			<form action="<?php echo $controller.'/'.$function_delete; ?>" method="post" id="px-site-content-news-message-form">
+			<form action="<?php echo $controller.'/'.$function_delete; ?>" method="post" id="px-site_content-news-message-form">
 			<input type="hidden" name="id">
 			<div class="mb-title"><span class="fa fa-warning"></span> Warning</div>
 			<div class="mb-content">

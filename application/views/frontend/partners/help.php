@@ -1,8 +1,10 @@
 <section id="cover">
-     <div class="cover-header text-center" style="background-image: url(<?php echo base_url() ?>assets/frontend_assets/img/slide3.jpg);">
-    <div class="container">
-        <h3>Software as a Service<br>at Your Service</h3>
-        <h5>See how we make it works</h5>
+     <div class="cover-header text-center" style="background-image: url(<?php echo 'assets/uploads/banner/'.$partners_banner_2->id.'/'.$partners_banner_2->banner ?>);">
+    <div class="box-black">
+         <div class="container">
+        <h3 style="font-size:40px;"><?php echo $partners_banner_2->short_content ?></h3>
+        <h5><?php echo $partners_banner_2->content ?></h5>
+    </div>
     </div>
     </div>
 </section>
@@ -15,9 +17,9 @@
 					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/1.png">
 				</div>
 				<div class="col-md-6 text-left">
-					<div><span class="number">1</span></div>
+					<div class="text-center"><span class="number">1</span></div>
 					<div class="content-sec-help">
-					<p><b>Tell us your requirements.</b> With our 24/7 support, we are ready to help you, anytime, anywhere, for any business problems.</p>	
+					<p><?php echo $partners_help_1->content ?></p>	
 					</div>
 				</div>
 			</div>
@@ -30,9 +32,9 @@
 					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/2.png">
 				</div>
 				<div class="col-md-6 text-left">
-					<div><span class="number">2</span></div>
+					<div class="text-center"><span class="number">2</span></div>
 					<div class="content-sec-help">
-					<p><b>We will find the right solutions.</b> Our team will off¬er you the most suitable technology solution.</p>	
+					<p><?php echo $partners_help_2->content ?></p>	
 					</div>
 				</div>
 			</div>
@@ -45,9 +47,9 @@
 					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/3.png">
 				</div>
 				<div class="col-md-6 text-left">
-					<div><span class="number">3</span></div>
+					<div class="text-center"><span class="number">3</span></div>
 					<div class="content-sec-help">
-					<p><b>Rapid and easy deployment.</b> We will guide you every step of the way through the implementation.</p>	
+					<p><?php echo $partners_help_3->content ?></p>	
 					</div>
 				</div>
 			</div>
@@ -60,9 +62,9 @@
 					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/4.png">
 				</div>
 				<div class="col-md-6 text-left">
-					<div><span class="number">4</span></div>
+					<div class="text-center"><span class="number">4</span></div>
 					<div class="content-sec-help">
-					<p><b>We will monitor the implementation.</b> We will provide constant monitoring and training to ensure that objectives of the software adoption are met.</p>	
+					<p><?php echo $partners_help_4->content ?></p>	
 					</div>
 				</div>
 			</div>
@@ -75,9 +77,9 @@
 					<img src="<?php echo base_url() ?>assets/frontend_assets/img/help/5.png">
 				</div>
 				<div class="col-md-6 text-left">
-					<div><span class="number">5</span></div>
+					<div class="text-center"><span class="number">5</span></div>
 					<div class="content-sec-help">
-					<p><b>Grow your business with us. </b> We are focused on helping companies achieve their company goals because we believe that the ultimate proof of a great software is client success.</p>	
+					<p><?php echo $partners_help_5->content ?></p>	
 					</div>
 				</div>
 			</div>

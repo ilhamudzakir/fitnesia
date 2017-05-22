@@ -1,9 +1,11 @@
 <section id="slider">
-    <div class="banner-partner" style="background-image: url(<?php echo base_url() ?>assets/frontend_assets/img/slide1.jpg);">
-    <div class="containter content-partner">
-    	<h3>Satuplatform help saas companies worldwide enter southeast Asian market</h3>
-        <div id="desc-slide"><span>Grow and scale your business at 0 sec</span></div>
-        <a href="<?php echo base_url() ?>partners/help"><button class="btn btn-partner">See how it works</button></a>
+    <div class="banner" style="background-image: url(<?php echo 'assets/uploads/banner/'.$partners_banner->id.'/'.$partners_banner->banner ?>);">
+    <div class="box-black">
+        <div class="containter content-partner">
+    	<h3 style="font-weight: bold; font-size:40px;"><?php echo $partners_banner->short_content ?></h3>
+        <div id="desc-slide"><span><?php echo $partners_banner->content ?></span></div>
+        <button class="btn btn-partner" id="goto-section-unique">See how it works</button>
+    </div>
     </div>
     </div>
 </section>
@@ -15,11 +17,9 @@
             <div class="row">
                 <div class="col-md-12">
                 <div class="text-center">
-                    <h2 class="title-white">What is Satuplatform?</h2>
-                    <h4>One-stop Solutions for SAAS Companies</h4>
+                    <h2 class="title-white"><?php echo $partners_content_1->title ?></h2>
                 </div>
-                   <p>Satuplatform is a platform that helps SaaS companies around the world tap into the growing number of businesses and industries in Southeast Asia.</p>
-                   <p>For Southeast Asia, it is not Software As a Service. It is a Software AND A Service. It is not as simple as building a reliable cloud-based solution that can scale virtually. You need a partner who can work with your users to scale them up as well. We understand that a lot of education is needed not just to sell product but to retain and even up-sell. We are here to take care two of the most crucial parts of any SaaS business: customer acquisition and customer retention.</p>
+                   <?php echo $partners_content_1->content ?>
                 </div>
             </div>
         </div>
@@ -36,24 +36,24 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="text-center">
-					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/accelerate.png">
-					<h5>We help you accelerate</h5>
+					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/accelerate.png" style="width: 100px;">
+					<h5><?php echo $partners_icon_1->title ?></h5>
 					</div>
-					<p>Scaling your product to other unfamiliar regions can put your business at risk. Our platform allows you to maximize the reach and scale of your business without growing your payroll.</p>
+					<p><?php echo $partners_icon_1->content ?></p>
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
-					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/partners.png">
-					<h5>We help retain customers</h5>
+					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/partners.png" style="width: 100px;">
+					<h5><?php echo $partners_icon_2->title ?></h5>
 					</div>
-					<p>Being a SaaS provider in Southeast Asia requires its own locally contextualized innovation of being Software AND a Service. We will take care of the SERVICE so you can just focus on the SOFTWARE.</p>
+					<p><?php echo $partners_icon_2->content ?></p>
 				</div>
 				<div class="col-md-4">
 					<div class="text-center">
-					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/upfont.png">
-					<h5>With no upfront cost</h5>
+					<img class="img-content-unique" src="<?php echo base_url() ?>assets/frontend_assets/img/upfont.png" style="width: 100px;">
+					<h5><?php echo $partners_icon_3->title ?></h5>
 					</div>
-					<p>No sign-up fee required. We pride ourselves as the “ZERO-risk” platform where you can enjoy all the benefits of scaling your product without bearing any financial risk. With commission per sale, we only make money when you do.</p>
+					<p><?php echo $partners_icon_3->content ?></p>
 				</div>
 			</div>
 		</div>
@@ -99,15 +99,15 @@
     <input placeholder="Full Name" class="form-control" type="text">
   </div>
    <div class="form-group">
-    <input placeholder="Company Name" class="form-control" type="text">
-  </div>
-
-  <div class="form-group">
     <input placeholder="Email" class="form-control" type="email">
   </div>
 
+  <div class="form-group">
+    <input placeholder="Phone" class="form-control" type="text">
+  </div>
+
     <div class="form-group">
-    <input placeholder="Phone Number" class="form-control" type="text">
+    <input placeholder="Website" class="form-control" type="text">
   </div>
   <div class="form-group">
   <textarea class="form-control" placeholder="Leave a message"></textarea>
@@ -121,3 +121,5 @@
 	</div>
 		
 </section>
+
+<input type="hidden" id="goto_value" value="<?php if(isset($_GET['goto'])) if($_GET['goto'] == 'form') echo $_GET['goto'] ?>" />

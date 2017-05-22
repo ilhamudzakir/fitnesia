@@ -31,7 +31,11 @@
 				</div>
 				<div class="panel-body">
 					<div class="gallery" id="links">
-             			<?php foreach ($data as $data_row) { ?>
+             			<?php $no=0; foreach ($data as $data_row) { $no++;
+                                            if ($no == 1) { ?>
+					<div class="row">
+                                            <?php }
+                                     ?>
 			            <a class="gallery-item" title="<?php echo $data_row->title; ?>" data-gallery>
 			                <div class="image">                              
 			                    <img src="assets/uploads/banner/<?php echo $data_row->id.'/'.$data_row->banner; ?>" alt="<?php echo $data_row->title; ?>"/>                                        
@@ -45,10 +49,14 @@
 			                </div>
 			                <div class="meta">
 			                    <strong><?php echo $data_row->title; ?></strong>
-			                    <span><?php echo $data_row->content; ?></span>
 			                </div>                                
 			            </a>
-			            <?php } ?>                         
+			            <?php
+				if ($no == 4) {
+					$no = 0; ?>
+				</div>
+				<?php }
+			 } ?>                       
 			             
 			        </div>
 			             

@@ -133,14 +133,20 @@
 	float: left;
 }
 .image-crop-previews-ban {
-	width: 207px;
+	width: 279.4px;
 	height: 100px;
 	overflow: hidden;
 	float: left;
 }
 .image-crop-previews-news {
-	width: 350px;
+	width: 160px;
 	height: 100px;
+	overflow: hidden;
+	float: left;
+}
+.image-crop-previews-solution_list {
+	width: 100px;
+	height: 166px;
 	overflow: hidden;
 	float: left;
 }

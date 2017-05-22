@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#px-site-content-news-message-form').validate({
+	$('#px-site_content-news-message-form').validate({
 		ignore: [],
 		rules: {                                            
 			id: {
@@ -8,7 +8,7 @@ $(document).ready(function(){
 		},
 		submitHandler: function(form) {
 			var target = $(form).attr('action');
-			$('#px-site-content-news-message-form .msg-status').text('Deleting data');
+			$('#px-site_content-news-message-form .msg-status').text('Deleting data');
 			$.ajax({
 				url : target,
 				type : 'POST',
@@ -16,11 +16,11 @@ $(document).ready(function(){
 				data : $(form).serialize(),
 				success : function(response){
 					if(response.status == 'ok'){
-						$('#px-site-content-news-message-form .msg-status').text('Delete Success...');
+						$('#px-site_content-news-message-form .msg-status').text('Delete Success...');
 						window.location.href = response.redirect;
 					}
 					else
-						$('#px-site-content-news-message-form .msg-status').text('Delete Failed');
+						$('#px-site_content-news-message-form .msg-status').text('Delete Failed');
 				},
 				error : function(jqXHR, textStatus, errorThrown) {
 					alert(textStatus, errorThrown);
@@ -29,9 +29,9 @@ $(document).ready(function(){
 		}
 	});
 	$('body').delegate('.btn-delete','click',function(){
-		$('#px-site-content-news-message-box').addClass('open');
+		$('#px-site_content-news-message-box').addClass('open');
 		var id = $(this).attr('data-target-id');
-		$('#px-site-content-news-message-form input[name="id"]').val('');
-		$('#px-site-content-news-message-form input[name="id"]').val(id);
+		$('#px-site_content-news-message-form input[name="id"]').val('');
+		$('#px-site_content-news-message-form input[name="id"]').val(id);
 	});
 })

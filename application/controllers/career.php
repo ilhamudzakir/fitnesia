@@ -10,10 +10,9 @@ class Career extends PX_Controller {
 	}
 
 	public function index() {
-		$data = $this->get_app_settings();
+		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
-		
-
+		$data['careers_banner'] = $this->model_basic->select_where($this->tbl_banner, 'id', 4)->row();
 		$data['page'] = $this->load->view('frontend/career/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

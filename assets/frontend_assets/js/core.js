@@ -49,4 +49,21 @@ $(".dropdown-menu").mouseleave(function(){
 $(window).load(function() {
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");;
+                var goto = $('#goto_value').val();
+                if(goto == 'form')
+                {
+                    var offset = -70; //Offset of 20px
+
+                    $('html, body').animate({
+                        scrollTop: $("#become-partner").offset().top + offset
+                    }, 2000);
+                }
+});
+
+$("#goto-section-unique").click(function() {
+    var offset = -70; //Offset of 20px
+
+    $('html, body').animate({
+        scrollTop: $("#unique").offset().top + offset
+    }, 2000);
 });

@@ -10,10 +10,9 @@ class Privacy extends PX_Controller {
 	}
 
 	public function index() {
-		$data = $this->get_app_settings();
+		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
 		
-
 		$data['page'] = $this->load->view('frontend/privacy/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

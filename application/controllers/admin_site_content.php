@@ -672,10 +672,22 @@ class Admin_site_content extends PX_Controller {
     function news() {
         $data = $this->get_app_settings();
         $data += $this->controller_attr;
-        $data += $this->get_function('Admin News', 'news');
+        $data += $this->get_function('News', 'news');
         $data += $this->get_menu();
         $this->check_userakses($data['function_id'], ACT_READ);
         $data['data'] = $this->model_basic->select_all_order($this->tbl_news, 'id', 'DESC');
+        foreach($data['data'] as $data_row)
+        {
+            switch($data_row->category_id)
+            {
+                case 1:
+                    $data_row->category = 'All Category';
+                    break;
+                default:
+                    $data_row->category = 'Unknown';
+                    break;
+            }
+        }
         $data['content'] = $this->load->view('backend/admin_site_content/news', $data, true);
         $this->load->view('backend/index', $data);
     }
@@ -683,7 +695,7 @@ class Admin_site_content extends PX_Controller {
     function news_form() {
         $data = $this->get_app_settings();
         $data += $this->controller_attr;
-        $data += $this->get_function('Admin News', 'news');
+        $data += $this->get_function('News', 'news');
         $data += $this->get_menu();
         $this->check_userakses($data['function_id'], ACT_CREATE);
         $id = $this->input->post('id');
@@ -710,26 +722,27 @@ class Admin_site_content extends PX_Controller {
     function news_add() {
         $data = $this->get_app_settings();
         $data += $this->controller_attr;
-        $data += $this->get_function('Admin News', 'news');
+        $data += $this->get_function('News', 'news');
         $data += $this->get_menu();
+        $img_name_crop = uniqid() . '-solutions.jpg';
         $this->check_userakses($data['function_id'], ACT_CREATE);
+        
         $images = $this->input->post('images');
         $table_field = $this->db->list_fields($this->tbl_news);
         $insert = array();
         foreach ($table_field as $field) {
             $insert[$field] = $this->input->post($field);
         }
+        $insert['photo'] = $img_name_crop;
         $insert['date_created'] = date('Y-m-d H:i:s', now());
         $insert['date_modified'] = date('Y-m-d H:i:s', now());
-        $insert['id_creator'] = $this->session_admin['admin_id'];
-        $insert['id_modifier'] = $this->session_admin['admin_id'];
-        if ($insert['title'] && $insert['content']) {
+        if ($insert['title']) {
             $do_insert = $this->model_basic->insert_all($this->tbl_news, $insert);
             if ($do_insert) {
                 if ($images) {
                     if (!is_dir(FCPATH . "assets/uploads/news/" . $do_insert->id))
                         mkdir(FCPATH . "assets/uploads/news/" . $do_insert->id);
-                    $content = $insert['content'];
+                    $content = $insert['description'];
                     foreach ($images as $im) {
                         if (strpos($content, $im) !== false) {
                             $new_im = 'assets/uploads/news/' . $do_insert->id . '/' . basename($im);
@@ -739,35 +752,81 @@ class Admin_site_content extends PX_Controller {
                     }
                     $update['content'] = $content;
                     $do_update = $this->model_basic->update($this->tbl_news, $update, 'id', $do_insert->id);
-                    $this->delete_temp('temp_folder');
-                }    
-                $this->returnJson(array('status' => 'ok', 'msg' => 'Input data success', 'redirect' => $data['controller'] . '/' . $data['function']));
+                }
+                $redirect = $data['controller'] . '/news/' . $do_insert->id;
+                if ($this->input->post('photo')) {
+                    $origw = $this->input->post('origwidth');
+                    $origh = $this->input->post('origheight');
+                    $fakew = $this->input->post('fakewidth');
+                    $fakeh = $this->input->post('fakeheight');
+                    $x = $this->input->post('x') * $origw / $fakew;
+                    $y = $this->input->post('y') * $origh / $fakeh;
+                    # ambil width crop
+                    $targ_w = $this->input->post('w') * $origw / $fakew;
+                    # ambil heigth crop
+                    $targ_h = $this->input->post('h') * $origh / $fakeh;
+                    # rasio gambar crop
+                    $jpeg_quality = 100;
+                    if (!is_dir(FCPATH . 'assets/uploads/news/' . $do_insert->id))
+                        mkdir(FCPATH . 'assets/uploads/news/' . $do_insert->id);
+                    if (basename($this->input->post('photo')) && $this->input->post('photo') != null) {
+                        $src = $this->input->post('photo');
+                    }
+                    # inisial handle copy gambar
+                    $ext = pathinfo($src, PATHINFO_EXTENSION);
+
+                    if ($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG')
+                        $img_r = imagecreatefromjpeg($src);
+                    if ($ext == 'png' || $ext == 'PNG')
+                        $img_r = imagecreatefrompng($src);
+                    if ($ext == 'gif' || $ext == 'GIF')
+                        $img_r = imagecreatefromgif($src);
+
+                    $dst_r = ImageCreateTrueColor($targ_w, $targ_h);
+                    # simpan hasil croping pada folder lain
+                    $path_img_crop = realpath(FCPATH . 'assets/uploads/news/' . $do_insert->id);
+                    # nama gambar yg di crop
+                    # proses copy
+                    imagecopyresampled($dst_r, $img_r, 0, 0, $x, $y, $targ_w, $targ_h, $targ_w, $targ_h);
+                    # buat gambar
+                    if (!imagejpeg($dst_r, $path_img_crop . '/' . $img_name_crop, $jpeg_quality)) {
+                        $this->model_basic->delete($this->tbl_campaign, 'id', $do_insert->id);
+                        $this->delete_folder('news/' . $do_insert->id);
+                        $this->returnJson(array('status' => 'error', 'msg' => 'Upload Falied'));
+                    } else {
+                        $this->makeThumbnails($path_img_crop . '/', $img_name_crop, 432, 269);
+                        $this->delete_temp('temp_folder');
+                        $this->returnJson(array('status' => 'ok', 'msg' => 'Input data success', 'redirect' => $redirect));
+                    }
+                } else {
+                    $this->returnJson(array('status' => 'ok', 'msg' => 'Input data success', 'redirect' => $redirect));
+                }
             }
             else
                 $this->returnJson(array('status' => 'error', 'msg' => 'Failed when saving data'));
         }
         else
-            $this->returnJson(array('status' => 'error', 'msg' => 'Please complete the form'));
+            $this->returnJson(array('status' => 'error', 'msg' => 'Please check the form'));
     }
 
     function news_edit() {
         $data = $this->get_app_settings();
         $data += $this->controller_attr;
-        $data += $this->get_function('Admin News', 'news');
+        $data += $this->get_function('News', 'news');
         $data += $this->get_menu();
         $this->check_userakses($data['function_id'], ACT_UPDATE);
         
         $images = $this->input->post('images');
+        $img_name_crop = uniqid() . '-solutions.jpg';
+        $foto = $this->input->post('photo');
+        $old_foto = $this->input->post('old_photo');
         $table_field = $this->db->list_fields($this->tbl_news);
         $update = array();
         foreach ($table_field as $field) {
             $update[$field] = $this->input->post($field);
         }
         unset($update['date_created']);
-        unset($update['photo_small']);
-        unset($update['photo_landscape']);
         $update['date_modified'] = date('Y-m-d H:i:s', now());
-        $update['id_modifier'] = $this->session_admin['admin_id'];
         if ($images) {
             if (!is_dir(FCPATH . "assets/uploads/news/" . $update['id']))
                 mkdir(FCPATH . "assets/uploads/news/" . $update['id']);
@@ -783,94 +842,16 @@ class Admin_site_content extends PX_Controller {
                     @unlink($im);
             }
             $update['content'] = $content;
-        }
-        if ($update['title'] && $update['content']) {
-            $do_update = $this->model_basic->update($this->tbl_news, $update, 'id', $update['id']);
-            if ($do_update)
-            {
-                $this->delete_temp('temp_folder');
-                $this->returnJson(array('status' => 'ok', 'msg' => 'Update success', 'redirect' => $data['controller'] . '/' . $data['function']));
-            }
-            else
-                $this->returnJson(array('status' => 'error', 'msg' => 'Failed when updating data'));
             $this->delete_temp('temp_folder');
         }
-        else
-            $this->returnJson(array('status' => 'error', 'msg' => 'Please complete the form'));
-    }
-
-    function news_delete() {
-        $data = $this->get_app_settings();
-        $data += $this->controller_attr;
-        $data += $this->get_function('Admin News', 'news');
-        $data += $this->get_menu();
-        $this->check_userakses($data['function_id'], ACT_DELETE);
-        $id = $this->input->post('id');
-        $do_delete = $this->model_basic->delete($this->tbl_news, 'id', $id);
-        if ($do_delete) {
-            $this->delete_folder('news/' . $id);
-            $this->returnJson(array('status' => 'ok', 'msg' => 'Delete Success', 'redirect' => $data['controller'] . '/' . $data['function']));
-        }
-        else
-            $this->returnJson(array('status' => 'error', 'msg' => 'Delete Failed'));
-    }
-    
-    function news_images($id)
-    {
-        $data = $this->get_app_settings();
-        $data += $this->controller_attr;
-        $data += $this->get_function('News Images', 'news');
-        $data += $this->get_menu();
-        $this->check_userakses($data['function_id'], ACT_READ);
-        if ($id) {
-            $data['data'] = $this->model_basic->select_where($this->tbl_news, 'id', $id)->row();
-        }
-        else
-            $data['data'] = null;
-        $data['content'] = $this->load->view('backend/admin_site_content/news_images', $data, true);
-        $this->load->view('backend/index', $data);
-    }
-    
-    function news_photo_landscape()
-    {
-        $data = $this->get_app_settings();
-        $data += $this->controller_attr;
-        $data += $this->get_function('News Photo Landscape', 'news');
-        $data += $this->get_menu();
-        $this->check_userakses($data['function_id'], ACT_READ);
-        $id = $this->input->post('id');
-        if ($id) {
-            $data['data'] = $this->model_basic->select_where($this->tbl_news, 'id', $id)->row();
-        }
-        else
-            $data['data'] = null;
-        $data['content'] = $this->load->view('backend/admin_site_content/news_photo_landscape', $data, true);
-        $this->load->view('backend/index', $data);
-    }
-    
-    function photo_landscape_edit()
-    {
-        $data = $this->get_app_settings();
-        $data += $this->controller_attr;
-        $data += $this->get_function('News Photo Landscape', 'news');
-        $data += $this->get_menu();
-        $this->check_userakses($data['function_id'], ACT_UPDATE);
-        
-        $foto = $this->input->post('photo_landscape');
-        $old_foto = $this->input->post('old_photo_landscape');
-        $img_name_crop = uniqid() . '-news.jpg';
-        $update = array();
-        $update['id'] = $this->input->post('id');
-        $update['date_modified'] = date('Y-m-d H:i:s', now());
-        $update['id_modifier'] = $this->session_admin['admin_id'];
         if (($foto && (basename($foto) != $old_foto)) || ($this->input->post('x') || $this->input->post('y') || $this->input->post('w') || $this->input->post('h')))
-            $update['photo_landscape'] = $img_name_crop;
+            $update['photo'] = $img_name_crop;
         else
-            $update['photo_landscape'] = $this->input->post('old_photo_landscape');
-        if ($update['photo_landscape']) {
+            $update['photo'] = $this->input->post('old_photo');
+
+        if ($update['id'] && $update['title']) {
             $do_update = $this->model_basic->update($this->tbl_news, $update, 'id', $update['id']);
-            if ($do_update)
-            {
+            if ($do_update) {
                 if (($foto && (basename($foto) != $old_foto)) || ($this->input->post('x') || $this->input->post('y') || $this->input->post('w') || $this->input->post('h'))) {
                     $origw = $this->input->post('origwidth');
                     $origh = $this->input->post('origheight');
@@ -888,7 +869,7 @@ class Admin_site_content extends PX_Controller {
                         mkdir(FCPATH . 'assets/uploads/news/' . $update['id']);
 
                     if (basename($foto) && $foto != null)
-                        $src = $this->input->post('photo_landscape');
+                        $src = $this->input->post('photo');
                     else if ($this->input->post('x') || $this->input->post('y') || $this->input->post('w') || $this->input->post('h'))
                         $src = "assets/uploads/news/" . $update['id'] . '/' . $old_foto;
                     # inisial handle copy gambar
@@ -908,18 +889,36 @@ class Admin_site_content extends PX_Controller {
                     # proses copy
                     imagecopyresampled($dst_r, $img_r, 0, 0, $x, $y, $targ_w, $targ_h, $targ_w, $targ_h);
                     # buat gambar
-                    if (imagejpeg($dst_r, $path_img_crop . '/' . $img_name_crop, $jpeg_quality))
-                        @unlink('assets/uploads/news/' . $update['id'] . '/' . $this->input->post('old_photo_landscape'));
+                    if (imagejpeg($dst_r, $path_img_crop . '/' . $img_name_crop, $jpeg_quality)) {
+                        $this->makeThumbnails($path_img_crop . '/', $img_name_crop, 432, 269);
+                        @unlink('assets/uploads/news/' . $update['id'] . '/' . $this->input->post('old_photo'));
+                        @unlink('assets/uploads/news/' . $update['id'] . '/thumb' . $this->input->post('old_photo'));
+                    }
                     $this->delete_temp('temp_folder');
                 }
-                $this->returnJson(array('status' => 'ok', 'msg' => 'Update success', 'redirect' => $data['controller'] . '/news_images/'.$update['id']));
+                $redirect = $data['controller'] . '/news/' . $update['id'];
+                $this->returnJson(array('status' => 'ok', 'msg' => 'Update success', 'redirect' => $redirect));
             }
             else
                 $this->returnJson(array('status' => 'error', 'msg' => 'Failed when updating data'));
-            $this->delete_temp('temp_folder');
         }
         else
             $this->returnJson(array('status' => 'error', 'msg' => 'Please complete the form'));
     }
 
+    function news_delete() {
+        $data = $this->get_app_settings();
+        $data += $this->controller_attr;
+        $data += $this->get_function('News', 'news');
+        $data += $this->get_menu();
+        $this->check_userakses($data['function_id'], ACT_DELETE);
+        $id = $this->input->post('id');
+        $do_delete = $this->model_basic->delete($this->tbl_news, 'id', $id);
+        if ($do_delete) {
+            $this->delete_folder('news/' . $id);
+            $this->returnJson(array('status' => 'ok', 'msg' => 'Delete Success', 'redirect' => $data['controller'] . '/' . $data['function']));
+        }
+        else
+            $this->returnJson(array('status' => 'error', 'msg' => 'Delete Failed'));
+    }
 }

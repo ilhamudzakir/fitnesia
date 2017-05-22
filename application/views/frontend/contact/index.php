@@ -4,22 +4,22 @@
 		<h3 class="title-black">Get in Touch</h3>
   <form>
   <div class="form-group">
-    <input type="text" placeholder="Full Name" class="form-control">
+    <input type="text" placeholder="Full Name" class="form-control" required>
   </div>
    <div class="form-group">
-    <input type="text" placeholder="Company Name" class="form-control">
+    <input type="text" placeholder="Company Name" class="form-control" required>
   </div>
 
   <div class="form-group">
-    <input type="email" placeholder="Email" class="form-control">
+    <input type="email" placeholder="Email" class="form-control" required>
   </div>
 
     <div class="form-group">
-    <input type="text" placeholder="Phone Number" class="form-control">
+    <input type="text" placeholder="Phone Number" class="form-control" required>
   </div>
    <div class="form-group">
    <label>I'm interested in</label>
-    <select class="form-control">
+    <select class="form-control" required>
     <option value="">Please Select</option>
     	 <optgroup label="Industry solutions">
        <option>Education</option>
@@ -43,7 +43,7 @@
     </select>
   </div>
   <div class="form-group">
-  <textarea class="form-control" placeholder="Message"></textarea>
+  <textarea class="form-control" placeholder="Message" required></textarea>
   </div>
 
  <div class="form-group">
@@ -60,10 +60,11 @@
 				<h5>Contact</h5>
 				<p>Komplek Majapahit Permai</p>
 				<p>Blok C No.109</p>
+                                <p>Jakarta, Indonesia 10160</p>
 				<br>
 				<p>+6221 351 7984</p>
-				<p>info@satuplatfor.com</p>
-				<p>www.satuplatform.com</p>
+				<p>sales@satuplatform.com</p>
+				<p>support@satuplatform.com</p>
 			</div>
 		</div>
 	</div>

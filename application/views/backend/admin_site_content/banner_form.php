@@ -36,9 +36,15 @@
                         <div class="alert alert-warning hidden"><strong>Processing! </strong><span>Please Wait...</span></div>
                         <div class="alert alert-danger hidden"><strong>Failed! </strong><span></span></div>
                         <div class="form-group">
-                            <label class="col-md-2 col-xs-12 control-label" for="#px-site-content-banner-form-title">Short Text</label>
+                            <label class="col-md-2 col-xs-12 control-label" for="#px-site-content-banner-form-title">Title</label>
                             <div class="col-md-9 col-xs-12">
                                 <input type="text" class="form-control" name="title" id="px-site-content-banner-form-title" value="<?php if ($data) echo $data->title; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 col-xs-12 control-label" for="#px-site-content-banner-form-short_content">Short Text</label>
+                            <div class="col-md-9 col-xs-12">
+                                <input type="text" class="form-control" name="short_content" id="px-site-content-banner-form-short_content" value="<?php if ($data) echo $data->short_content; ?>">
                             </div>
                         </div>
                         <div class="form-group">
@@ -47,31 +53,14 @@
                                 <textarea class="form-control" name="content" id="px-site-content-banner-form-content"><?php if ($data) echo $data->content; ?></textarea>
                             </div>
                         </div>
+                        <!--
                         <div class="form-group">
                             <label class="col-md-2 col-xs-12 control-label" for="#px-site-content-banner-form-link">Link</label>
                             <div class="col-md-9 col-xs-12">
                                 <input type="text" class="form-control" name="link" id="px-site-content-banner-form-link" value="<?php if ($data) echo $data->link; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-2 col-xs-12 control-label" for="#px-site-content-banner-form-status">Visibility</label>
-                            <div class="col-md-9 col-xs-12">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" value="1" name="status" class="px-site-content-banner-form-status" <?php if ($data) {
-    if ($data->status == 1) echo 'checked';
-} else echo 'checked'; ?>>
-                                        Visible
-                                    </label>
-                                    <label>
-                                        <input type="radio" value="0" name="status" class="px-site-content-banner-form-status" <?php if ($data) {
-    if ($data->status == 0) echo 'checked';
-} ?>>
-                                        Hidden
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                        -->
                         <div class="form-group">
                             <label class="col-md-2 col-xs-12 control-label">Banner</label>
                             <div class="col-md-9 col-xs-12">

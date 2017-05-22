@@ -10,19 +10,17 @@ class Support extends PX_Controller {
 	}
 
 	public function index() {
-		$data = $this->get_app_settings();
+		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
 		
-
 		$data['page'] = $this->load->view('frontend/support/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
 
 	public function detail() {
-		$data = $this->get_app_settings();
+		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
 		
-
 		$data['page'] = $this->load->view('frontend/support/detail',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

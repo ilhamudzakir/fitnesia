@@ -15,7 +15,7 @@ body{
 	letter-spacing: 1px;
 	font-size: 13px;
 	overflow-x:hidden;
-	margin-bottom: 100px;
+	//margin-bottom: 100px;
 }
 #content-blog h1{
 	font-family: 'comforta-bold';
@@ -203,10 +203,9 @@ header{
 	font-size: 13px;
 }
 .banner{
-	height: 400px;
+	height: auto;
 	width: 100%;
 	text-align: center;
-	padding: 50px
 }
 
 .banner h3{
@@ -268,22 +267,26 @@ footer{
 	padding-bottom: 20px;
 }
 .contact-footer{
-	color: #ca341b;
+        position: fixed;
+	z-index: 9999;
+        bottom:15px;
+        right:50px;
+	color: #fff;
 	text-transform: uppercase;
 	padding: 7px;
 	letter-spacing: 1px;
 	padding-left: 20px;
 	padding-right: 20px;
 	font-weight: 600;
-	background: #fff;
+	background: #ca341b;
 	border-radius: 4px;
 	border:1px solid #ca341b;
 
 }
 .contact-footer:hover{
 	border:1px solid #ca341b;
-	background: #ca341b;
-	color: #fff;
+        background: #fff;
+        color: #ca341b;
 }
 .contact-content{
 	background: #f2f4f3;
@@ -402,12 +405,16 @@ footer li{
 	padding: 60px;
 	background: rgba(210,62,50,0.8);
 }
+.box-black{
+	padding: 40px;
+	background: rgba(0,0,0,0.5);
+}
 .box-image{
 	background:url("../img/box-img.jpg") no-repeat right center;
 	background-size: cover;
 }
 .box-image-partner{
-	background:url("../img/img-partner.jpg") no-repeat right center;
+	background:url("../img/banner/partner_2.jpg") no-repeat right center;
 	background-size: cover;
 }
 
@@ -483,7 +490,7 @@ footer li{
 }
 .cover-header {
     height: auto;
-    padding: 40px;
+    //padding: 40px;
     width: 100%;
 }
 .cover-header h3{
@@ -518,7 +525,7 @@ footer li{
 	margin-top: 5px;
 }
 .title-blog{
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: bold;
 }
 .isi-blog .read-more{
@@ -780,9 +787,9 @@ textarea:focus {
    color:    #6f6e73;
 }
 footer{
-	position: fixed;
-	z-index: 9999;
-	bottom: 0px;
+	//position: fixed;
+	//z-index: 9999;
+	//bottom: 0px;
 	width: 100%;
 }
 footer a{
@@ -850,7 +857,7 @@ footer a:hover{
 #content-faq .content-faq{
 	font-size: 15px;
 	color: #9d9ea0;
-	9d9ea0
+	text-align: justify;
 }
 .color-orange{
 	color: #eb3627;
@@ -928,6 +935,9 @@ optgroup {
     	float: left;
     	margin-right: 13px;
 	}
+        #content-home img{
+    width:100px;
+}
 
 } 
 
@@ -952,9 +962,19 @@ optgroup {
 	.menu-top{
 		background: #fff
 	}
-	.navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu > li > a {
+	.navbar-nav .open .dropdown-menu > li > a {
     display: none;
 	}
+        .dropdown-header
+        {
+            padding-left: 3px !important;
+            padding-bottom: 1px !important;
+            color : red;
+        }
+        .divider
+        {
+            margin : 1px !important;
+        }
 	.no-padding{
 		padding-right: 13px;
 		padding-left: 13px;
@@ -970,7 +990,7 @@ optgroup {
 		margin-left: 13px;
 	}
 	.banner-slide h3{
-		font-size: 30px;
+		font-size: 20px;
 	}
 	#desc-slide {
     	color: #fff;
@@ -1010,7 +1030,7 @@ optgroup {
 	}
 	.banner-partner h3 {
     color: #fff;
-    font-size: 35px;
+    font-size: 20px;
 	}
 	.cover-header h3 {
     color: #fff;
@@ -1023,7 +1043,7 @@ optgroup {
 	}
 	.cover-header {
     height: auto;
-    padding: 10px;
+    //padding: 10px;
     width: 100%;
 	}
 .isi-solution {
@@ -1033,6 +1053,9 @@ optgroup {
 #form-supp {
     background: #f2f4f3 none repeat scroll 0 0;
     padding: 10px;
+}
+#content-home img{
+    width:100px;
 }
 } 
 
