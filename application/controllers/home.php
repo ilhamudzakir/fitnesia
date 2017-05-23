@@ -7,6 +7,7 @@ class Home extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'home','controller_name' => 'Home');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {

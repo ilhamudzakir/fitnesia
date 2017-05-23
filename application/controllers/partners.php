@@ -7,6 +7,7 @@ class Partners extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'partners','controller_name' => 'Partners');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {
@@ -33,5 +34,25 @@ class Partners extends PX_Controller {
 		$data['page'] = $this->load->view('frontend/partners/help',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
+        
+        function submit_form()
+        {
+            $table_field = $this->db->list_fields($this->tbl_become_partners);
+            $insert = array();
+            foreach ($table_field as $field) {
+                $insert[$field] = $this->input->post($field);
+            }
+            if($this->input->post('other_saas'))
+            {
+                $insert['saas_type'] = $this->input->post('other_saas');
+            }
+            $insert['date_created'] = date('Y-m-d H:i:s', now());
+            if($this->input->post('company') && $this->input->post('fullname') && $this->input->post('email'))
+            {
+                if(!$this->model_basic->insert_all($this->tbl_become_partners, $insert))
+                        redirect('partners?goto=form&submit=error');
+                redirect('partners?goto=form&submit=success');
+            }
+        }
 
 }

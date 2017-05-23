@@ -7,6 +7,7 @@ class Privacy extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'privacy','controller_name' => 'Privacy');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {

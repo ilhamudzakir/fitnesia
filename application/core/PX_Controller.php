@@ -23,6 +23,9 @@ class PX_Controller extends CI_Controller {
         $this->tbl_usergroup = $this->tbl_prefix . 'usergroup';
         $this->tbl_underconstruct_status = $this->tbl_prefix. 'underconstruct_status';
         $this->tbl_solutions = $this->tbl_prefix. 'solutions';
+        $this->tbl_become_partners = $this->tbl_prefix. 'become_partners';
+        $this->tbl_contact_us = $this->tbl_prefix. 'contact_us';
+        $this->tbl_visitor = $this->tbl_prefix. 'visitor';
         // MODELS
         $this->load->model('model_basic');
         $this->load->model('model_menu');
@@ -31,6 +34,7 @@ class PX_Controller extends CI_Controller {
         $this->load->model('model_useraccess');
         $this->load->model('model_usergroup');
         $this->load->model('model_master');
+        $this->load->model('model_visitor');
         // sessions
         if ($this->session->userdata('admin') != FALSE)
             $this->session_admin = $this->session->userdata('admin');
@@ -276,6 +280,31 @@ class PX_Controller extends CI_Controller {
                 redirect('underconstruction');
             } else
                 return TRUE;
+        }
+    }
+    
+    function check_visitor()
+    {
+        $this->load->library('user_agent');
+        $ip = $this->input->ip_address();
+        $browser = $this->agent->agent_string();
+        $array_where = array('ip_address' => $ip, 'date' => date('Y-m-d', now()));
+        $visitor = $this->model_basic->select_where_array($this->tbl_visitor, $array_where);
+        if($visitor->num_rows() == 0)
+        {
+            $insert = array(
+                'browser' => $browser,
+                'ip_address' => $ip,
+                'counter' => 1,
+                'date' => date('Y-m-d', now())
+                );
+            $this->model_basic->insert_all($this->tbl_visitor, $insert);
+            return TRUE;
+        }
+        else if($visitor->num_rows() == 1)
+        {
+            $this->model_visitor->update_counter($visitor->row()->id);
+            return TRUE;
         }
     }
 

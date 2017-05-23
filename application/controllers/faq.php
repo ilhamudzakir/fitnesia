@@ -7,6 +7,7 @@ class Faq extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'faq','controller_name' => 'FAQ');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {

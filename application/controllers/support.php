@@ -7,6 +7,7 @@ class Support extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'support','controller_name' => 'Support');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {
