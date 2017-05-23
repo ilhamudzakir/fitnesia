@@ -110,6 +110,10 @@
     <input placeholder="Website" class="form-control" type="text">
   </div>
   <div class="form-group">
+      <label style="color:white">Couldn't find your businesses / industries? Let us know so we can help you</label>
+    <input placeholder="Leave your comment" class="form-control" type="text">
+  </div>
+  <div class="form-group">
   <textarea class="form-control" placeholder="Leave a message"></textarea>
   </div>
 
