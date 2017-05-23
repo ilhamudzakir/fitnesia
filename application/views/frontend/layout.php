@@ -12,7 +12,11 @@
     <link rel="shortcut icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    <?php if(($this->uri->segment(2) == 'detail') && ($this->uri->segment(1) == 'blog')) { ?>
+    <meta property="og:image" content="<?php echo base_url(); ?>assets/uploads/news/<?php echo $blog->id ?>/<?php echo $blog->photo ?>" />
+    <meta property="og:title" content="<?php echo $blog->title ?>" />
+    <meta property="og:description" content="<?php echo $blog->short_desc ?>" />
+    <?php } ?>
     <!--style-->
     <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url() ?>assets/frontend_assets/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url() ?>assets/frontend_assets/css/bootstrap.min.css"/>

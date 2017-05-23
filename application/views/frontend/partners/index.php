@@ -1,5 +1,5 @@
 <section id="slider">
-    <div class="banner" style="background-image: url(<?php echo 'assets/uploads/banner/'.$partners_banner->id.'/'.$partners_banner->banner ?>);">
+    <div class="banner" style="background-image: url(<?php echo 'assets/uploads/banner/'.$partners_banner->id.'/'.$partners_banner->banner ?>); background-size: cover; background-repeat: no-repeat;">
     <div class="box-black">
         <div class="containter content-partner">
     	<h3 style="font-weight: bold; font-size:40px;"><?php echo $partners_banner->short_content ?></h3>
