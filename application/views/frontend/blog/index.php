@@ -7,7 +7,14 @@
 <section id="content-blog">
 <div class="">
     <div class="row" id="content-row">
-        <?php foreach($blog as $data_row) { ?>
+        <?php
+        $no=0;
+        foreach($blog as $data_row) {
+        $no++;
+        if ($no==4){
+            echo"<div class='row'>";
+        }
+        ?>
     	<div class="box-blog col-md-3">
     		<a href="blog/detail/<?php echo $data_row->id ?>"><img src="<?php echo 'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo ?>"></a>
     		<div class="isi-blog">
@@ -16,7 +23,11 @@
     		<a class="read-more" href="blog/detail/<?php echo $data_row->id ?>"><span >Read More ></span></a>
     		</div>
     	</div>
-        <?php } ?>
+        <?php 
+        if ($no==4){ 
+            echo"</div>";
+        }
+        } ?>
     </div>
     <?php if($count_blog>8){ ?>
     <div class="row">
