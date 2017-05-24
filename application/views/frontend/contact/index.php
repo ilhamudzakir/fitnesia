@@ -2,24 +2,31 @@
 	<div class="container contact-content">
 		<div class="FadeInBlock col-md-6" id="form-contact">
 		<h3 class="title-black">Get in Touch</h3>
-  <form>
+                <?php if(isset($_GET['submit'])) {
+                if($_GET['submit'] == 'success') {
+                    ?>
+                <div class="alert alert-success">Thank You ! Your form has been submitted. We will contact you soon.</div>
+                <?php } else { ?>
+                <div class="alert alert-danger">Submit form Failed ! Please Try Again</div>
+                <?php }} ?>
+  <form action="contact/submit_form" method="POST">
   <div class="form-group">
-    <input type="text" placeholder="Full Name" class="form-control" required>
+    <input type="text" placeholder="Full Name" class="form-control" name="fullname" required>
   </div>
    <div class="form-group">
-    <input type="text" placeholder="Company Name" class="form-control" required>
+    <input type="text" placeholder="Company Name" class="form-control" name="company" required>
   </div>
 
   <div class="form-group">
-    <input type="email" placeholder="Email" class="form-control" required>
+    <input type="email" placeholder="Email" class="form-control" name="email" required>
   </div>
 
     <div class="form-group">
-    <input type="text" placeholder="Phone Number" class="form-control" required>
+    <input type="text" placeholder="Phone Number" class="form-control" name="phone" required>
   </div>
    <div class="form-group">
    <label>I'm interested in</label>
-    <select class="form-control" required>
+    <select class="form-control" name="saas_type" required>
     <option value="">Please Select</option>
     	 <optgroup label="Industry solutions">
        <option>Education</option>
@@ -43,7 +50,7 @@
     </select>
   </div>
   <div class="form-group">
-  <textarea class="form-control" placeholder="Message" required></textarea>
+  <textarea class="form-control" placeholder="Message" name="message" required></textarea>
   </div>
 
  <div class="form-group">

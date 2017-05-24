@@ -7,6 +7,7 @@ class Solution extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'solution','controller_name' => 'Solution');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {

@@ -216,8 +216,16 @@ header{
 	min-height: 470px;
 	width: 100%;
 	text-align: center;
-	padding: 50px;
-	padding-top:90px;
+	//padding: 50px;
+	//padding-top:90px;
+}
+
+.box-black-home
+{
+    background: rgba(0,0,0,0.5);
+    padding: 50px;
+    padding-bottom: 160px;
+    padding-top: 90px;
 }
 
 .banner-slide h3{
@@ -410,7 +418,7 @@ footer li{
 	background: rgba(0,0,0,0.5);
 }
 .box-image{
-	background:url("../img/box-img.jpg") no-repeat right center;
+	background:url("../img/banner/home_learn_more.jpg") no-repeat top right;
 	background-size: cover;
 }
 .box-image-partner{
@@ -997,10 +1005,15 @@ optgroup {
 	}
 	.banner-slide {
     min-height: 370px;
-    padding: 20px;
+    //padding: 20px;
     text-align: center;
     width: 100%;
 	}
+        .box-black-home
+        {
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+        }
 	.row-sec{
 		margin-bottom: 30px;
 	}

@@ -7,6 +7,7 @@ class Blog extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'Blog','controller_name' => 'Blog');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {
@@ -45,6 +46,11 @@ class Blog extends PX_Controller {
                 if($blog->num_rows() != 1)
                     redirect('blog');
                 $blog->row()->date_created = date('M d, Y', strtotime($blog->row()->date_created));
+                $blog->row()->short_desc = limit_words($blog->row()->content, 50);
+                $url = base_url().'blog/detail/'.$blog->row()->id;
+                $data['sharing_facebook'] = 'https://www.facebook.com/sharer/sharer.php?u='.$url.'&t='.url_title($blog->row()->title);
+                $data['sharing_twitter'] = 'https://twitter.com/share?text='.$blog->row()->title.'&url='.$url;
+                $data['sharing_google_plus'] = 'https://plus.google.com/share?url='.$url;
                 $data['blog'] = $blog->row();
                 $data['next_blog'] = $this->model_basic->select_where_limit_order($this->tbl_news, 'id >', $blog->row()->id, 1, 'id', 'ASC');
 		$data['prev_blog'] = $this->model_basic->select_where_limit_order($this->tbl_news, 'id <', $blog->row()->id, 1, 'id', 'DESC');

@@ -7,6 +7,7 @@ class About extends PX_Controller {
 		parent::__construct();
 		$this->controller_attr = array('controller' => 'about','controller_name' => 'About');
                 $this->do_underconstruct();
+                $this->check_visitor();
 	}
 
 	public function index() {

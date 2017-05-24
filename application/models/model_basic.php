@@ -156,5 +156,12 @@ class Model_basic extends PX_Model {
 		$data = $this->db->get($table, $limit, $start);
 		return $data;
 	}
+        
+        function select_sum($table, $column, $alias)
+        {
+            $this->db->select_sum($column, $alias);
+            $query = $this->db->get($table);
+            return $query->row();
+        }
 
 }

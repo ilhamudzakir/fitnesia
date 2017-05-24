@@ -1,5 +1,5 @@
 <section id="slider">
-    <div class="banner" style="background-image: url(<?php echo 'assets/uploads/banner/'.$partners_banner->id.'/'.$partners_banner->banner ?>);">
+    <div class="banner" style="background-image: url(<?php echo 'assets/uploads/banner/'.$partners_banner->id.'/'.$partners_banner->banner ?>); background-size: cover; background-repeat: no-repeat;">
     <div class="box-black">
         <div class="containter content-partner">
     	<h3 style="font-weight: bold; font-size:40px;"><?php echo $partners_banner->short_content ?></h3>
@@ -67,14 +67,21 @@
 		<h2 class="title-white">Get Started on SATUPLATFORM now!</h2>
 		<br>
 		<h5 class="subtitle-white">Please fill out the form below and our Partner Management Team will contact you</h5>
+                <?php if(isset($_GET['submit'])) {
+                if($_GET['submit'] == 'success') {
+                    ?>
+                <div class="alert alert-success">Thank You ! Your form has been submitted. Our Partner Management Team will contact you soon.</div>
+                <?php } else { ?>
+                <div class="alert alert-danger">Submit form Failed ! Please Try Again</div>
+                <?php }} ?>
 	</div>
 <div id="form-become">
-  <form>
+  <form action="partners/submit_form" method="POST">
    <div class="form-group">
-    <input placeholder="Company Name" class="form-control" type="text">
+    <input placeholder="Company Name" class="form-control" type="text" name="company" required>
   </div>
   <div class="form-group">
-    <select class="form-control">
+    <select class="form-control" name="saas_type" required>
         <option value="" hidden>SAAS Type</option>
         <optgroup label="INDUSTRY SOLUTIONS">
             <option value="Education">Education</option>
@@ -96,21 +103,25 @@
     </select>
   </div>
   <div class="form-group">
-    <input placeholder="Full Name" class="form-control" type="text">
+    <input placeholder="Full Name" class="form-control" type="text" name="fullname" required>
   </div>
    <div class="form-group">
-    <input placeholder="Email" class="form-control" type="email">
+    <input placeholder="Email" class="form-control" type="email" name="email" required>
   </div>
 
   <div class="form-group">
-    <input placeholder="Phone" class="form-control" type="text">
+    <input placeholder="Phone" class="form-control" type="text" name="phone" required>
   </div>
 
     <div class="form-group">
-    <input placeholder="Website" class="form-control" type="text">
+    <input placeholder="Website" class="form-control" type="text" name="website">
   </div>
   <div class="form-group">
-  <textarea class="form-control" placeholder="Leave a message"></textarea>
+      <label style="color:white">Couldn't find your businesses / industries? Let us know so we can help you</label>
+    <input placeholder="Leave your comment" class="form-control" type="text" name="other_saas">
+  </div>
+  <div class="form-group">
+  <textarea class="form-control" placeholder="Leave a message" name="message" required></textarea>
   </div>
 
  <div class="form-group">

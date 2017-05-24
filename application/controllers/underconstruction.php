@@ -3,6 +3,7 @@
 class Underconstruction extends PX_Controller {
 	function __construct() {
 		parent::__construct();
+                $this->check_visitor();
 		$this->controller_attr = array('controller' => 'Underconstruction','controller_name' => 'Underconstruction','controller_id' => 0);
 	}
 	public function index() {

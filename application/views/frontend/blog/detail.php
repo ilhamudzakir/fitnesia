@@ -11,7 +11,10 @@
                     <span class="title">Tags: </span> <span class="tag-content"><?php echo $blog->tags ?></span>
                 </div>
                 <div class="col-md-6 col-xs-12 tags text-right">
-                    <span class="title">Share this post: </span> <img src="assets/frontend_assets/img/fb.png" width="30px"> <img src="assets/frontend_assets/img/twit.png" width="30px"> <img src="assets/frontend_assets/img/email.png" width="30px">
+                    <span class="title">Share this post: </span>
+                    <a href="<?php echo $sharing_facebook ?>" target="_blank"><img src="assets/frontend_assets/img/fb.png" width="30px"></a>
+                    <a href="<?php echo $sharing_twitter ?>" target="_blank"><img src="assets/frontend_assets/img/twit.png" width="30px"></a>
+                    <a href="<?php echo $sharing_google_plus ?>" target="_blank"><img src="assets/frontend_assets/img/google_plus.png" width="30px"></a>
                 </div>
             </div>
         </div>

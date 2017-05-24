@@ -3,11 +3,13 @@
         <div class="carousel-inner">
 
             <div class="item active">
-                <div class="banner-slide" style="background-image: url(<?php echo 'assets/uploads/banner/'.$home_banner->id.'/'.$home_banner->banner ?>);">
-                    <div class="containter content-silde">
-                        <h3 style="font-weight: bold; font-size:40px;"><?php echo $home_banner->short_content ?></h3>
-                        <div id="desc-slide"><span><?php echo $home_banner->content ?></span></div>
-                        <a href="partners/help"><button class="btn btn-slide">See how it works</button></a>
+                <div class="banner-slide" style="background-image: url(<?php echo 'assets/uploads/banner/'.$home_banner->id.'/'.$home_banner->banner ?>);  background-size: cover; background-repeat: no-repeat;">
+                    <div class="box-black-home">
+                        <div class="containter content-silde">
+                            <h3 style="font-weight: bold; font-size:40px;"><?php echo $home_banner->short_content ?></h3>
+                            <div id="desc-slide"><span><?php echo $home_banner->content ?></span></div>
+                            <a href="partners/help"><button class="btn btn-slide">See how it works</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
