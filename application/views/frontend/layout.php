@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url() ?>assets/frontend_assets/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url() ?>assets/frontend_assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url() ?>assets/frontend_assets/css/fitnesia.css"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url() ?>assets/backend_assets/css/fontawesome/font-awesome.min.css"/>
     <!-- end style -->
 </head>
 <?php $this->load->view('frontend/header') ?>

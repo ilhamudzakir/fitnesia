@@ -1,6 +1,6 @@
 <section id="cover">
     <div class="container">
-        <h3 class="title-black">Satuplatform Blog</h3>
+        <h3 class="title-black"></h3>
     </div>
 </section>
 

@@ -997,7 +997,7 @@ optgroup {
 		margin-left: 13px;
 	}
 	.banner-slide h3{
-		font-size: 20px;
+		font-size: 25px;
 	}
 	#desc-slide {
     	color: #fff;
@@ -1030,6 +1030,12 @@ optgroup {
     color: #fff;
     font-size: 25px;
 	}
+        .title-black {
+    font-size: 25px;
+	}
+        .title-white {
+    font-size: 25px;
+	}
 	.picture-box {
     padding: 10px;
     text-align: center;
@@ -1042,11 +1048,11 @@ optgroup {
 	}
 	.banner-partner h3 {
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
 	}
 	.cover-header h3 {
     color: #fff;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
 	}
 	.cover-header h5 {

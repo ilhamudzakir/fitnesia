@@ -2,7 +2,7 @@
      <div class="cover-header text-center" style="background-image: url(<?php echo 'assets/uploads/banner/'.$partners_banner_2->id.'/'.$partners_banner_2->banner ?>);">
     <div class="box-black">
          <div class="container">
-        <h3 style="font-size:40px;"><?php echo $partners_banner_2->short_content ?></h3>
+        <h3><?php echo $partners_banner_2->short_content ?></h3>
         <h5><?php echo $partners_banner_2->content ?></h5>
     </div>
     </div>

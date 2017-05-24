@@ -61,7 +61,11 @@
                         </ul>
                     </div>
                     <div class="col-md-2  col-sm-3 col-lg-2 text-right no-padding get-start-col">
+                        <?php if($this->uri->segment(1) == 'partners') { ?>
                         <a href="<?php echo base_url() ?>partners?goto=form"> <button class="get-start">Get Started</button></a>
+                        <?php } else { ?>
+                        <button class="get-start" style="width:175px"><span class="fa fa-phone"></span> +6221 351 7984</button>
+                        <?php } ?>
                     </div>
                 </div>
             </div><!-- /.nav-collapse -->

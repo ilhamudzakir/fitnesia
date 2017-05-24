@@ -6,7 +6,7 @@
                 <div class="banner" style="background-image: url(<?php echo 'assets/uploads/banner/'.$home_banner->id.'/'.$home_banner->banner ?>);  background-size: cover; background-repeat: no-repeat;">
                     <div class="box-black">
                         <div class="containter content-silde">
-                            <h3 style="font-weight: bold; font-size:40px;"><?php echo $home_banner->short_content ?></h3>
+                            <h3><?php echo $home_banner->short_content ?></h3>
                             <div id="desc-slide"><span><?php echo $home_banner->content ?></span></div>
                             <a href="partners/help"><button class="btn btn-slide">See how it works</button></a>
                         </div>
