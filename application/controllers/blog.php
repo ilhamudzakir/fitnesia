@@ -14,7 +14,7 @@ class Blog extends PX_Controller {
 		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
                 $data['count_blog']=$this->model_basic->count($this->tbl_news);
-             	$data['blog'] = $this->model_basic->select_all_limit_order_offset($this->tbl_news, 1,8, 'id', 'DESC');
+             	$data['blog'] = $this->model_basic->select_all_limit_order_offset($this->tbl_news, 0,8, 'id', 'DESC');
                 // echo $this->db->last_query($data['blog']);
                 // die();
                 
