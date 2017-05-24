@@ -3,8 +3,8 @@
         <div class="carousel-inner">
 
             <div class="item active">
-                <div class="banner-slide" style="background-image: url(<?php echo 'assets/uploads/banner/'.$home_banner->id.'/'.$home_banner->banner ?>);  background-size: cover; background-repeat: no-repeat;">
-                    <div class="box-black-home">
+                <div class="banner" style="background-image: url(<?php echo 'assets/uploads/banner/'.$home_banner->id.'/'.$home_banner->banner ?>);  background-size: cover; background-repeat: no-repeat;">
+                    <div class="box-black">
                         <div class="containter content-silde">
                             <h3 style="font-weight: bold; font-size:40px;"><?php echo $home_banner->short_content ?></h3>
                             <div id="desc-slide"><span><?php echo $home_banner->content ?></span></div>
@@ -25,19 +25,19 @@
             <!-- <h5 class="title-grey">SatuPlatform is the go to platform for your work needs</h5> -->
         </div>
 
-        <div class="row sec-solution fadeInBlock">
+        <div class="row sec-solution">
             <div class="col-md-4 text-center row-sec">
                 <img src="<?php echo base_url() ?>assets/frontend_assets/img/efective.png">
                 <h5 class="header-text"><?php echo $home_icon_1->title ?></h5>
                 <span><?php echo $home_icon_1->content ?></span>
             </div>
-            <div class="col-md-4 text-center fadeInBlock  row-sec">
+            <div class="col-md-4 text-center row-sec">
                 <img src="<?php echo base_url() ?>assets/frontend_assets/img/support.png">
                 <h5 class="header-text"><?php echo $home_icon_2->title ?></h5>
                 <span><?php echo $home_icon_2->content ?></span>
             </div>
 
-            <div class="col-md-4 text-center fadeInBlock  row-sec">
+            <div class="col-md-4 text-center row-sec">
                 <img src="<?php echo base_url() ?>assets/frontend_assets/img/dollar.png">
                 <h5 class="header-text"><?php echo $home_icon_3->title ?></h5>
                 <span><?php echo $home_icon_3->content ?></span>

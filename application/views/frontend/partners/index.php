@@ -116,12 +116,14 @@
     <div class="form-group">
     <input placeholder="Website" class="form-control" type="text" name="website">
   </div>
+      <!--
   <div class="form-group">
-      <label style="color:white">Couldn't find your businesses / industries? Let us know so we can help you</label>
     <input placeholder="Leave your comment" class="form-control" type="text" name="other_saas">
   </div>
+      -->
   <div class="form-group">
-  <textarea class="form-control" placeholder="Leave a message" name="message" required></textarea>
+      <label style="color:white">Couldn't find your businesses / industries? Let us know so we can help you</label>
+        <textarea class="form-control" placeholder="Leave a message" name="message" required></textarea>
   </div>
 
  <div class="form-group">
