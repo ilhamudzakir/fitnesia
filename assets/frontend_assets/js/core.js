@@ -20,14 +20,36 @@ $(function() {
     
     });
 
-$(".box-blog").slice(0, 8).show();
     $("#loadMore").on('click', function (e) {
-        e.preventDefault();
-        $(".box-blog:hidden").slice(0, 8).slideDown();
-        if ($(".box-blog:hidden").length =='0') {
-            $("#load").fadeOut('slow');
-        }
-        $('html,body').animate({
+        // e.preventDefault();
+        // $(".box-blog:hidden").slice(0, 8).slideDown();
+        // if ($(".box-blog:hidden").length =='0') {
+        //     $("#load").fadeOut('slow');
+        // }
+ var offset = $("#loadMore").attr( "offset" );
+  var total = $("#loadMore").attr( "total" );
+  var base_url = $('#base_url').val();
+      $.ajax({
+   url : base_url + "blog/show_more/" + offset,
+    type: "GET",
+    dataType: "JSON",
+    success: function(data)
+    {
+       $('#content-row').append(data.data);
+       $('#loadMore').attr('offset',data.offset);
+
+       if(data.offset > total){
+        $('#loadMore').css('display','none');
+       }
+        
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+        alert('Error get data from ajax');
+    }
+});
+
+           $('html,body').animate({
             scrollTop: $(this).offset().top
         }, 1500);
     });

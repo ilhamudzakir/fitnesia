@@ -98,6 +98,16 @@ class Model_basic extends PX_Model {
 		$data = $this->db->get($table, $limit);
 		return $data;
 	}
+
+	function select_all_limit_order_offset($table, $offset,$limit, $order_by, $order){
+		$this->load->database('default',TRUE);
+		$this->db->select('*');
+		$this->db->from($table);
+        $this->db->order_by($order_by, $order);
+        $this->db->limit($limit,$offset);
+		$data = $this->db->get();
+		return $data->result();
+	}
 	function count($table){
 		$this->load->database('default',TRUE);
 		$this->db->select('*');

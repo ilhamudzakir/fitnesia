@@ -6,7 +6,7 @@
 
 <section id="content-blog">
 <div class="">
-    <div class="row">
+    <div class="row" id="content-row">
         <?php foreach($blog as $data_row) { ?>
     	<div class="box-blog col-md-3">
     		<a href="blog/detail/<?php echo $data_row->id ?>"><img src="<?php echo 'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo ?>"></a>
@@ -18,12 +18,15 @@
     	</div>
         <?php } ?>
     </div>
+    <?php if($count_blog>8){ ?>
     <div class="row">
         <div class="col-md-12">
         <div style="margin-bottom:100px;" class="text-center">
-            <a href="#" id="loadMore"><button class="get-start">Load More</button></a>
+           <button class="get-start" id="loadMore" offset="8" total="<?php echo $count_blog ?>">Load More</button>
         </div>
         </div>
     </div>
+    <?php } ?>
 </div>
+<input type="hidden" name="base_url" id="base_url" value="<?php echo base_url() ?>">
 </section>
