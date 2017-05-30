@@ -56,6 +56,9 @@
 					<p><?php echo $partners_icon_3->content ?></p>
 				</div>
 			</div>
+                        <div class="row text-center" style="padding-top:40px;">
+                                <a class="faq-btn" href="faq">Check FAQ for more information</a>
+                        </div>
 		</div>
 	</div>
 </section>

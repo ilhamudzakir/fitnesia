@@ -8,7 +8,7 @@
                         <div class="containter content-silde">
                             <h3><?php echo $home_banner->short_content ?></h3>
                             <div id="desc-slide"><span><?php echo $home_banner->content ?></span></div>
-                            <a href="partners/help"><button class="btn btn-slide">See how it works</button></a>
+                            <a href="home/help"><button class="btn btn-slide">See how it works</button></a>
                         </div>
                     </div>
                 </div>

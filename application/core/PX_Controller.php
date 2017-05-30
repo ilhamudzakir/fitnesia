@@ -82,6 +82,7 @@ class PX_Controller extends CI_Controller {
         $data['solution_menu_technology'] = $this->model_basic->select_where($this->tbl_solutions, 'category_id', 1)->result();
         $data['solution_menu_business'] = $this->model_basic->select_where($this->tbl_solutions, 'category_id', 2)->result();
         $data['solution_menu_industry'] = $this->model_basic->select_where($this->tbl_solutions, 'category_id', 3)->result();
+        $data['copyright'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 19)->row();
         return $data;
     }
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2017 at 09:47 PM
+-- Generation Time: May 30, 2017 at 08:49 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -109,7 +109,7 @@ CREATE TABLE `px_banner` (
 INSERT INTO `px_banner` (`id`, `banner`, `title`, `short_content`, `content`, `link`, `id_creator`, `id_modifier`, `date_created`, `date_modified`) VALUES
 (1, '592324ca9444b-banner.jpg', 'Home', 'Software As a Service solutions for Businesses and Industries', 'Increase productivity, perform accurately', '0', 7, 7, '2017-05-23 00:50:02', '2017-05-23 00:51:30'),
 (2, '5923258045bce-banner.jpg', 'About', '', '', '0', 7, 7, '2017-05-23 00:53:04', '2017-05-23 00:53:04'),
-(3, '592325ae33a02-banner.jpg', 'Partners', 'Satuplatform help SAAS companies worldwide enter southeast Asian market', 'Grow and scale your business at 0 sec', '0', 7, 7, '2017-05-23 00:53:50', '2017-05-23 00:54:30'),
+(3, '592325ae33a02-banner.jpg', 'Partners', 'Satuplatform help SAAS companies worldwide enter southeast Asian market', '', '0', 7, 7, '2017-05-23 00:53:50', '2017-05-26 23:00:48'),
 (4, '592325cfda661-banner.jpg', 'Careers', 'Join Our Team', 'Satuplatform is empowering businesses and industries through software adaptation. We hire the best and brightest people to help make this mission a reality.', '0', 7, 7, '2017-05-23 00:54:23', '2017-05-23 00:54:23'),
 (5, '592325ffac52d-banner.jpg', 'FAQ', 'Frequently Asked Questions About Working with Satuplatform', 'Don’t see an answer to your question? Feel free to contact us.', '0', 7, 7, '2017-05-23 00:55:11', '2017-05-23 00:55:11'),
 (6, '5923261fb26f2-banner.jpg', 'Home Learn More', 'Our revolutionary business model allows businesses and industries enjoy the benefits of comprehensive and powerful enterprise software system at affordable prices', '', '0', 7, 7, '2017-05-23 00:55:43', '2017-05-23 00:55:43'),
@@ -140,7 +140,8 @@ CREATE TABLE `px_become_partners` (
 
 INSERT INTO `px_become_partners` (`id`, `company`, `saas_type`, `fullname`, `email`, `phone`, `website`, `message`, `date_created`, `read_flag`) VALUES
 (1, 'PT. Bangunindo Teknusa Jaya', 'Test', 'Edo Apriyadi', 'edoapriyadi@gmail.com', '081290847470', 'www.bangunindo.com', 'Test Form', '2017-05-24 00:46:43', 0),
-(2, 'PT. Bangunindo Teknusa Jaya', 'Education', 'Edo Apriyadi', 'edoapriyadi@gmail.com', '081290847470', 'www.bangunindo.com', '\nWhat is Lorem Ipsum?\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\nWhy do we use it?\n\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\nWhere does it come from?\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\nWhere can I get some?\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don''t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn''t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', '2017-05-24 00:47:28', 1);
+(2, 'PT. Bangunindo Teknusa Jaya', 'Education', 'Edo Apriyadi', 'edoapriyadi@gmail.com', '081290847470', 'www.bangunindo.com', '\nWhat is Lorem Ipsum?\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\nWhy do we use it?\n\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\nWhere does it come from?\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\nWhere can I get some?\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don''t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn''t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', '2017-05-24 00:47:28', 1),
+(3, 'PT. Bangunindo Teknusa Jaya', 'Data & Analytics Management', 'Edo Apriyadi', 'edoapriyadi@gmail.com', '081290847470', 'www.bangunindo.com', 'test', '2017-05-24 12:05:34', 1);
 
 -- --------------------------------------------------------
 
@@ -926,7 +927,8 @@ INSERT INTO `px_static_content` (`id`, `title`, `content`, `date_created`, `date
 (15, 'Faster Deployment & More Flexibility', '<p><span class="desc">Deploying traditionally licensed software requires \r\nlicense purchasing, takes more time, and generally more training. The \r\ncontracts that comes with the product usually oblige customers to pay \r\nmaintenance fees regardless of whether or not they see any business \r\nvalue from such services. SaaS by their very nature tend to be easier to\r\n get up and running on in much less time, and have virtually no barriers\r\n to exit.</span></p>', '2017-05-23 01:30:54', '2017-05-23 01:30:54', 7, 7),
 (16, 'Better Infrastructure', '<p><span class="desc">SaaS apps operate in the Cloud which means you can \r\naccess your application and your data anywhere you access the internet. \r\nThings associated with the Cloud include reliability, scalability, and \r\nflexibility which allows businesses to streamline services and not worry\r\n aboutinfrastructure overhead or management of the required hardware for\r\n traditional software. IT is no longer a concern.</span></p>', '2017-05-23 01:31:08', '2017-05-23 01:31:08', 7, 7),
 (17, 'Better Security', '<p><span class="desc">Your data is more secure with a 3rd party SaaS \r\nvendor, than it is being managed in-house by a small IT resource. There \r\nalso tends to be less incidences of downtime and reliability issues.</span></p>', '2017-05-23 01:31:21', '2017-05-23 01:31:21', 7, 7),
-(18, 'Lower Price', '<p><span class="desc">Most of the time traditional enterprise software \r\ncompanies offer their products at much higher price point and their \r\npricing strategy is often evaluated based on cost with much less focus \r\non the actual value created from localizing for new global markets. At \r\nSatuplatform, we work with our SaaS partners to determine what the \r\nmarket in each respective location in Southeast Asia can handle and \r\ncharge accordingly.</span></p>', '2017-05-23 01:31:36', '2017-05-23 01:31:36', 7, 7);
+(18, 'Lower Price', '<p><span class="desc">Most of the time traditional enterprise software \r\ncompanies offer their products at much higher price point and their \r\npricing strategy is often evaluated based on cost with much less focus \r\non the actual value created from localizing for new global markets. At \r\nSatuplatform, we work with our SaaS partners to determine what the \r\nmarket in each respective location in Southeast Asia can handle and \r\ncharge accordingly.</span></p>', '2017-05-23 01:31:36', '2017-05-23 01:31:36', 7, 7),
+(19, 'Copyright', '<p>©Satuplatform</p>', '2017-05-26 23:10:44', '2017-05-26 23:10:44', 7, 7);
 
 -- --------------------------------------------------------
 
@@ -1051,7 +1053,11 @@ CREATE TABLE `px_visitor` (
 --
 
 INSERT INTO `px_visitor` (`id`, `browser`, `ip_address`, `counter`, `date`) VALUES
-(1, 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0', '::1', 5, '2017-05-24');
+(1, 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0', '::1', 40, '2017-05-24'),
+(2, 'Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36', '192.168.43.1', 9, '2017-05-24'),
+(3, 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0', '::1', 34, '2017-05-25'),
+(4, 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0', '::1', 35, '2017-05-26'),
+(5, 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0', '::1', 9, '2017-05-29');
 
 --
 -- Indexes for dumped tables
@@ -1192,7 +1198,7 @@ ALTER TABLE `px_banner`
 -- AUTO_INCREMENT for table `px_become_partners`
 --
 ALTER TABLE `px_become_partners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `px_contact_us`
 --
@@ -1222,7 +1228,7 @@ ALTER TABLE `px_solutions`
 -- AUTO_INCREMENT for table `px_static_content`
 --
 ALTER TABLE `px_static_content`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `px_underconstruct_status`
 --
@@ -1247,7 +1253,7 @@ ALTER TABLE `px_usergroup`
 -- AUTO_INCREMENT for table `px_visitor`
 --
 ALTER TABLE `px_visitor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

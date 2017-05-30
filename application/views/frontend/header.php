@@ -20,19 +20,9 @@
                     <div class="col-md-6 col-lg-6 col-sm-7 col-md-offset-2 menu-top">
                         <ul class="nav navbar-nav">
                             <li id="toogle-menu" class="dropdown mega-dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solution <span class="caret"></span>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu mega-dropdown-menu">
-                                    <li class="col-sm-12 col-xs-12 col-md-4">
-                                        <ul>
-                                            <li class="dropdown-header">Technology</li>
-                                            <li class="divider"></li>
-                                            <?php foreach($solution_menu_technology as $data_row) { ?>
-                                            <li><a href="solution/detail/<?php echo $data_row->id ?>"><?php echo $data_row->menu_title ?></a></li>
-                                            <?php } ?>
-                                            <li class="divider"></li>
-                                        </ul>
-                                    </li>
                                     <li class="ccol-sm-12 col-xs-12 col-md-4">
                                         <ul>
                                             <li class="dropdown-header">Business</li>
@@ -48,6 +38,16 @@
                                             <li class="dropdown-header">Industry</li>
                                             <li class="divider"></li>
                                             <?php foreach($solution_menu_industry as $data_row) { ?>
+                                            <li><a href="solution/detail/<?php echo $data_row->id ?>"><?php echo $data_row->menu_title ?></a></li>
+                                            <?php } ?>
+                                            <li class="divider"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-12 col-xs-12 col-md-4">
+                                        <ul>
+                                            <li class="dropdown-header">Technology</li>
+                                            <li class="divider"></li>
+                                            <?php foreach($solution_menu_technology as $data_row) { ?>
                                             <li><a href="solution/detail/<?php echo $data_row->id ?>"><?php echo $data_row->menu_title ?></a></li>
                                             <?php } ?>
                                             <li class="divider"></li>

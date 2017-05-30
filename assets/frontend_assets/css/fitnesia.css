@@ -296,6 +296,25 @@ footer{
         background: #fff;
         color: #ca341b;
 }
+.faq-btn{
+        background: #fff;
+        color: #ca341b;
+	text-transform: uppercase;
+	padding: 7px;
+	letter-spacing: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-weight: 600;
+        font-size: 20px;
+	border-radius: 4px;
+	border:1px solid #ca341b;
+
+}
+.faq-btn:hover{
+	border:1px solid #ca341b;
+	color: #fff;
+	background: #ca341b;
+}
 .contact-content{
 	background: #f2f4f3;
 	padding-right: 0px;
@@ -932,7 +951,9 @@ optgroup {
     	padding-top: 25px;
     	padding-right: 0px;
 	}
-
+        .faq-btn{
+            font-size:15px;
+        }
 
 
 } 
@@ -945,6 +966,9 @@ optgroup {
         #content-home img{
     width:100px;
 }
+        .faq-btn{
+            font-size:15px;
+        }
 
 } 
 
@@ -992,6 +1016,7 @@ optgroup {
 		background: #fff;
 		top: -7px;
 		position: relative;
+                display:none;
 	}
 	.navbar-brand{
 		margin-left: 13px;
@@ -1075,6 +1100,9 @@ optgroup {
 #content-home img{
     width:100px;
 }
+        .faq-btn{
+            font-size:11px;
+        }
 } 
 
 /* End MEdia Screen */

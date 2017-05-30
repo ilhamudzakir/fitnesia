@@ -28,7 +28,7 @@ class Blog extends PX_Controller {
 			$data.='<div class="box-blog col-md-3">
     		<a  href="blog/detail/'.$data_row->id.'"><img src="'.base_url().'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo.'"></a>
     		<div class="isi-blog">
-    		<span class="date-blog">'.time_elapsed_string($data_row->date_created).'</span>
+    		<!-- <span class="date-blog">'.time_elapsed_string($data_row->date_created).'</span> -->
                 <a style="color:black" href="blog/detail/'.$data_row->id.'"><p class="title-blog">'.$data_row->title.'</p></a>
     		<a class="read-more" href="blog/detail/'.$data_row->id.'"><span >Read More ></span></a>
     		</div>
