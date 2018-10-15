@@ -18,6 +18,8 @@ class Partners extends PX_Controller {
                 $data['partners_icon_1'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 7)->row();
                 $data['partners_icon_2'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 8)->row();
                 $data['partners_icon_3'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 9)->row();
+                
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 6)->row();
 		$data['page'] = $this->load->view('frontend/partners/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

@@ -16,11 +16,11 @@
         }
         ?>
     	<div class="box-blog col-md-3">
-    		<a href="blog/detail/<?php echo $data_row->id ?>"><img src="<?php echo 'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo ?>"></a>
+    		<a href="blog/detail/<?php echo $data_row->id ?>/<?php echo url_title($data_row->title) ?>"><img src="<?php echo 'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo ?>"></a>
     		<div class="isi-blog">
     		<!-- <span class="date-blog"><?php echo time_elapsed_string($data_row->date_created); ?></span> -->
-                <a href="blog/detail/<?php echo $data_row->id ?>" style="color:black"><p class="title-blog"><?php echo $data_row->title ?></p></a>
-    		<a class="read-more" href="blog/detail/<?php echo $data_row->id ?>"><span >Read More ></span></a>
+                <a href="blog/detail/<?php echo $data_row->id ?>/<?php echo url_title($data_row->title) ?>" style="color:black"><p class="title-blog"><?php echo $data_row->title ?></p></a>
+    		<a class="read-more" href="blog/detail/<?php echo $data_row->id ?>/<?php echo url_title($data_row->title) ?>"><span >Read More ></span></a>
     		</div>
     	</div>
         <?php 

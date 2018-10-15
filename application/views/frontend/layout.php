@@ -4,10 +4,8 @@
 <head>
 
     <title><?php echo $app_title; ?> - <?php echo $controller_name; ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name='robots' content='noindex, nofollow' />
-    <meta content="" name="title" />
-    <meta content="" name="author" />
+    <meta name="keyword" content="<?php echo $meta_data->meta_key; ?>">
+    <meta name="description" content="<?php echo $meta_data->description; ?>">
     <base href="<?php echo base_url() ?>" />
     <link rel="shortcut icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets/uploads/app_settings/<?php echo $app_favicon_logo; ?>">
@@ -37,7 +35,6 @@
 
 	<!--js-->
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/modernizr.js"></script>
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/frontend_assets/js/core.js"></script>
 	<!-- end js -->

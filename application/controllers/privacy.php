@@ -14,6 +14,7 @@ class Privacy extends PX_Controller {
 		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
 		
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 8)->row();
 		$data['page'] = $this->load->view('frontend/privacy/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

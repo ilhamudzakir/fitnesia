@@ -14,6 +14,7 @@ class Solution extends PX_Controller {
 		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
                 
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 3)->row();
 		$data['page'] = $this->load->view('frontend/solution/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
@@ -42,6 +43,7 @@ class Solution extends PX_Controller {
                         break;
                 }
                 
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 3)->row();
 		$data['page'] = $this->load->view('frontend/solution/detail',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

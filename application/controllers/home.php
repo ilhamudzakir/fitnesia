@@ -21,6 +21,7 @@ class Home extends PX_Controller {
                 $data['home_icon_3'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 3)->row();
                 $data['home_content_1'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 4)->row();
 		
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 1)->row();
 		$data['page'] = $this->load->view('frontend/home/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
@@ -33,6 +34,8 @@ class Home extends PX_Controller {
                 $data['home_learn_2'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 16)->row();
                 $data['home_learn_3'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 17)->row();
                 $data['home_learn_4'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 18)->row();
+                
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 1)->row();
 		$data['page'] = $this->load->view('frontend/home/learn',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
@@ -46,6 +49,8 @@ class Home extends PX_Controller {
                 $data['partners_help_3'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 12)->row();
                 $data['partners_help_4'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 13)->row();
                 $data['partners_help_5'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 14)->row();
+                
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 1)->row();
 		$data['page'] = $this->load->view('frontend/partners/help',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

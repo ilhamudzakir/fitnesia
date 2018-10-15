@@ -26,6 +26,8 @@ class PX_Controller extends CI_Controller {
         $this->tbl_become_partners = $this->tbl_prefix. 'become_partners';
         $this->tbl_contact_us = $this->tbl_prefix. 'contact_us';
         $this->tbl_visitor = $this->tbl_prefix. 'visitor';
+        $this->tbl_meta_data = $this->tbl_prefix. 'meta_data';
+        $this->tbl_faq = $this->tbl_prefix. 'faq';
         // MODELS
         $this->load->model('model_basic');
         $this->load->model('model_menu');

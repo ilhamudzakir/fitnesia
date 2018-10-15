@@ -15,6 +15,7 @@ class About extends PX_Controller {
                 $data += $this->controller_attr;
                 $data['about_banner'] = $this->model_basic->select_where($this->tbl_banner, 'id', 2)->row();
                 $data['about'] = $this->model_basic->select_where($this->tbl_static_content, 'id', 5)->row();
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 2)->row();
 		$data['page'] = $this->load->view('frontend/about/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

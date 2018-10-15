@@ -14,6 +14,7 @@ class Support extends PX_Controller {
 		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
 		
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 5)->row();
 		$data['page'] = $this->load->view('frontend/support/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
@@ -22,6 +23,7 @@ class Support extends PX_Controller {
 		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
 		
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 5)->row();
 		$data['page'] = $this->load->view('frontend/support/detail',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

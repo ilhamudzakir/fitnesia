@@ -18,6 +18,7 @@ class Blog extends PX_Controller {
                 // echo $this->db->last_query($data['blog']);
                 // die();
                 
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 4)->row();
 		$data['page'] = $this->load->view('frontend/blog/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
@@ -26,11 +27,11 @@ class Blog extends PX_Controller {
 		$data='';
 		foreach ($blog as $data_row) {
 			$data.='<div class="box-blog col-md-3">
-    		<a  href="blog/detail/'.$data_row->id.'"><img src="'.base_url().'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo.'"></a>
+    		<a  href="blog/detail/'.$data_row->id.'/'.url_title($data_row->title).'"><img src="'.base_url().'assets/uploads/news/'.$data_row->id.'/'.$data_row->photo.'"></a>
     		<div class="isi-blog">
     		<!-- <span class="date-blog">'.time_elapsed_string($data_row->date_created).'</span> -->
-                <a style="color:black" href="blog/detail/'.$data_row->id.'"><p class="title-blog">'.$data_row->title.'</p></a>
-    		<a class="read-more" href="blog/detail/'.$data_row->id.'"><span >Read More ></span></a>
+                <a style="color:black" href="blog/detail/'.$data_row->id.'/'.url_title($data_row->title).'"><p class="title-blog">'.$data_row->title.'</p></a>
+    		<a class="read-more" href="blog/detail/'.$data_row->id.'/'.url_title($data_row->title).'"><span >Read More ></span></a>
     		</div>
     	</div>';
 		}
@@ -56,6 +57,7 @@ class Blog extends PX_Controller {
 		$data['prev_blog'] = $this->model_basic->select_where_limit_order($this->tbl_news, 'id <', $blog->row()->id, 1, 'id', 'DESC');
                 $data['related_blog'] = $this->model_basic->select_where_limit_order($this->tbl_news, 'category_id', $blog->row()->category_id, 2, 'id', 'DESC')->result();
                 
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 4)->row();
 		$data['page'] = $this->load->view('frontend/blog/detail',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}

@@ -14,6 +14,7 @@ class Contact extends PX_Controller {
 		$data = $this->get_app_settings_frontend();
                 $data += $this->controller_attr;
 		
+                $data['meta_data'] = $this->model_basic->select_where($this->tbl_meta_data, 'id', 10)->row();
 		$data['page'] = $this->load->view('frontend/contact/index',$data,true);
 		$this->load->view('frontend/layout',$data);
 	}
